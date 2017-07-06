@@ -1,0 +1,75 @@
+exports[`Button-11 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+    }
+  }>
+  <button
+    className="Button__StyledButton-s1uynn61-0 hIWsji AbstractButton-as2i6-0 grcywE"
+    style={
+      Object {
+        "marginBottom": "8px",
+      }
+    }
+    type="button">
+    Primary
+  </button>
+  <button
+    className="Button__StyledButton-s1uynn61-0 doJNgz AbstractButton-as2i6-0 grcywE"
+    style={
+      Object {
+        "marginBottom": "8px",
+      }
+    }
+    type="button">
+    Secondary
+  </button>
+  <button
+    className="Button__StyledButton-s1uynn61-0 eziZua AbstractButton-as2i6-0 grcywE"
+    style={
+      Object {
+        "marginBottom": "8px",
+      }
+    }
+    type="button">
+    Success
+  </button>
+  <button
+    className="Button__StyledButton-s1uynn61-0 fprPyZ AbstractButton-as2i6-0 grcywE"
+    style={
+      Object {
+        "marginBottom": "8px",
+      }
+    }
+    type="button">
+    Info
+  </button>
+  <button
+    className="Button__StyledButton-s1uynn61-0 dOPNxi AbstractButton-as2i6-0 grcywE"
+    style={
+      Object {
+        "marginBottom": "8px",
+      }
+    }
+    type="button">
+    Warning
+  </button>
+  <button
+    className="Button__StyledButton-s1uynn61-0 dXpaOf AbstractButton-as2i6-0 grcywE"
+    style={
+      Object {
+        "marginBottom": "8px",
+      }
+    }
+    type="button">
+    Danger
+  </button>
+  <button
+    className="Button__StyledButton-s1uynn61-0 gyLQFz AbstractButton-as2i6-0 grcywE"
+    type="button">
+    Link
+  </button>
+</div>
+`;

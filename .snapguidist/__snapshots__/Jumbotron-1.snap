@@ -1,0 +1,16 @@
+exports[`Jumbotron-1 1`] = `
+<div
+  className="Jumbotron__StyledJumbotron-s1h578xs-0 LuafL">
+  <h1
+    style={
+      Object {
+        "fontSize": "2em",
+      }
+    }>
+    Jumbotron
+  </h1>
+  <p>
+    In a jumbotron, everything is bigger
+  </p>
+</div>
+`;

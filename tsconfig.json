@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016",
+      "es2017"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "outDir": "themed",
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "sourceMap": false,
+    "strict": true,
+    "target": "esnext"
+  }
+}

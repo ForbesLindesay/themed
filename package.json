@@ -1,0 +1,67 @@
+{
+  "name": "themed",
+  "version": "1.1.0",
+  "description": "Themed react components using styled-components",
+  "main": "index.js",
+  "files": [
+    "/lib",
+    "/prod",
+    "/dev"
+  ],
+  "scripts": {
+    "build": "npm run build:clean && concurrently --kill-others-on-fail \"npm run build:compile\" \"npm run build:styleguide\"",
+    "build:clean": "concurrently --kill-others-on-fail \"rimraf themed styleguide dev prod\" \"node ./scripts/copy-to-output --clean\"",
+    "build:compile": "npm run build:tsc && npm run build:babel && npm run build:output",
+    "build:tsc": "tsc",
+    "build:babel": "concurrently --kill-others-on-fail \"npm run build:babel:dev\" \"npm run build:babel:prod\"",
+    "build:babel:dev": "cross-env NODE_ENV=development babel themed --out-dir dev",
+    "build:babel:prod": "cross-env NODE_ENV=production babel themed --out-dir prod",
+    "build:output": "node ./scripts/copy-to-output",
+    "build:styleguide": "styleguidist build",
+    "test": "jest",
+    "start": "styleguidist server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themed-react/themed.git"
+  },
+  "author": "ForbesLindesay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/themed-react/themed/issues"
+  },
+  "homepage": "https://github.com/themed-react/themed#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-styled-components": "^1.1.7",
+    "babel-plugin-transform-dead-code-elimination": "^2.2.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-plugin-transform-node-env-inline": "^0.1.1",
+    "babel-preset-react-app": "^3.0.1",
+    "concurrently": "^3.5.0",
+    "cross-env": "^5.0.1",
+    "happypack": "^4.0.0-beta.1",
+    "jest": "^20.0.4",
+    "jest-styled-components": "^3.1.5",
+    "react": "^15.5.4",
+    "react-docgen-typescript": "0.0.15",
+    "react-dom": "^15.5.4",
+    "react-styleguidist": "^5.5.0",
+    "rimraf": "^2.6.1",
+    "s3": "^4.4.0",
+    "snapguidist": "^2.0.0",
+    "ts-loader": "^2.2.1",
+    "typescript": "^2.4.1",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "@types/node": "^8.0.8",
+    "@types/react": "^15.0.33",
+    "@types/react-dom": "^15.5.1",
+    "@types/react-router": "^4.0.12",
+    "@types/react-router-dom": "^4.0.5",
+    "polished": "^1.2.1",
+    "styled-components": "^2.1.1"
+  }
+}

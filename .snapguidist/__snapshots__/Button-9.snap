@@ -1,0 +1,45 @@
+exports[`Button-9 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "justifyContent": "space-around",
+    }
+  }>
+  <button
+    className="Button__StyledButton-s1d5mzv2-0 wKltA AbstractButton-as2i6-0 grcywE"
+    type="button">
+    Primary
+  </button>
+  <button
+    className="Button__StyledButton-s1d5mzv2-0 cedBXW AbstractButton-as2i6-0 grcywE"
+    type="button">
+    Secondary
+  </button>
+  <button
+    className="Button__StyledButton-s1d5mzv2-0 dHLtjB AbstractButton-as2i6-0 grcywE"
+    type="button">
+    Success
+  </button>
+  <button
+    className="Button__StyledButton-s1d5mzv2-0 gWSNyW AbstractButton-as2i6-0 grcywE"
+    type="button">
+    Info
+  </button>
+  <button
+    className="Button__StyledButton-s1d5mzv2-0 ZRnpy AbstractButton-as2i6-0 grcywE"
+    type="button">
+    Warning
+  </button>
+  <button
+    className="Button__StyledButton-s1d5mzv2-0 chTcXF AbstractButton-as2i6-0 grcywE"
+    type="button">
+    Danger
+  </button>
+  <button
+    className="Button__StyledButton-s1d5mzv2-0 dSMgik AbstractButton-as2i6-0 grcywE"
+    type="button">
+    Link
+  </button>
+</div>
+`;

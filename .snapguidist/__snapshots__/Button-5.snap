@@ -1,0 +1,9 @@
+exports[`Button-5 1`] = `
+<form>
+  <button
+    className="Button__StyledButton-s1d5mzv2-0 wKltA AbstractButton-as2i6-0 grcywE"
+    type="submit">
+    Submit this form
+  </button>
+</form>
+`;

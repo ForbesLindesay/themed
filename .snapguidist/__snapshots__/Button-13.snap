@@ -1,0 +1,17 @@
+exports[`Button-13 1`] = `
+<p>
+  You can put a 
+  <a
+    className="Button__StyledButton-s1uynn61-0 eDYVKQ AbstractButton-as2i6-0 grcywE"
+    href="#">
+    link
+  </a>
+   or 
+  <button
+    className="Button__StyledButton-s1uynn61-0 eDYVKQ AbstractButton-as2i6-0 grcywE"
+    type="button">
+    button
+  </button>
+   inline in some text too! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in tortor sapien. Sed eu aliquam mauris, id consectetur urna. Etiam ut rhoncus felis, sit amet tristique magna. Fusce sit amet feugiat dui. Integer consequat risus sit amet dolor sodales varius. Cras et commodo massa, quis egestas augue. Nulla aliquam maximus felis sed cursus. Sed eu nulla iaculis, varius mauris sed, laoreet quam. Etiam a iaculis tortor, nec suscipit sapien.
+</p>
+`;

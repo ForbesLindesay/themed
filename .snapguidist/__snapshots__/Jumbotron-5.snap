@@ -1,0 +1,22 @@
+exports[`Jumbotron-5 1`] = `
+<div>
+  <div
+    className="Jumbotron__StyledJumbotron-s1h578xs-0 gCEwL"
+    style={
+      Object {
+        "marginBottom": "16px",
+      }
+    }>
+    Normal size but with big corners
+  </div>
+  <div
+    className="Jumbotron__StyledJumbotron-s1h578xs-0 gCEwL"
+    style={
+      Object {
+        "fontSize": "4em",
+      }
+    }>
+    Eveng bigger jumbotron
+  </div>
+</div>
+`;

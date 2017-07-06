@@ -1,0 +1,66 @@
+exports[`Button-19 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "space-around",
+        "marginBottom": 16,
+      }
+    }>
+    <button
+      className="Button__StyledButton-s1uynn61-0 eCiGDQ AbstractButton-as2i6-0 grcywE"
+      type="button">
+      Primary
+    </button>
+    <button
+      className="Button__StyledButton-s1uynn61-0 hULkoe AbstractButton-as2i6-0 grcywE"
+      type="button">
+      Secondary
+    </button>
+    <button
+      className="Button__StyledButton-s1uynn61-0 fHXyAO AbstractButton-as2i6-0 grcywE"
+      type="button">
+      Success
+    </button>
+    <button
+      className="Button__StyledButton-s1uynn61-0 BIHBO AbstractButton-as2i6-0 grcywE"
+      type="button">
+      Info
+    </button>
+    <button
+      className="Button__StyledButton-s1uynn61-0 djsAFO AbstractButton-as2i6-0 grcywE"
+      type="button">
+      Warning
+    </button>
+    <button
+      className="Button__StyledButton-s1uynn61-0 gLJiFM AbstractButton-as2i6-0 grcywE"
+      type="button">
+      Danger
+    </button>
+    <button
+      className="Button__StyledButton-s1uynn61-0 kFohig AbstractButton-as2i6-0 grcywE"
+      type="button">
+      Link
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "space-around",
+      }
+    }>
+    <button
+      className="Button__StyledButton-s1uynn61-0 eCiGDQ AbstractButton-as2i6-0 grcywE"
+      style={
+        Object {
+          "fontSize": "4em",
+        }
+      }
+      type="button">
+      Large Button
+    </button>
+  </div>
+</div>
+`;

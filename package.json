@@ -53,7 +53,7 @@
     "snapguidist": "^2.0.0",
     "ts-loader": "^2.2.1",
     "typescript": "^2.4.1",
-    "webpack": "^2.6.1"
+    "webpack": "^3.0.0"
   },
   "dependencies": {
     "@types/node": "^8.0.8",

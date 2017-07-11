@@ -4,9 +4,16 @@
   "description": "Themed react components using styled-components",
   "main": "index.js",
   "files": [
-    "/lib",
-    "/prod",
-    "/dev"
+    "themed/",
+    "types/",
+    "dev/",
+    "prod/",
+    "Button.js",
+    "Button.d.ts",
+    "Container.js",
+    "Container.d.ts",
+    "Jumbotron.js",
+    "Jumbotron.d.ts"
   ],
   "scripts": {
     "build": "npm run build:clean && concurrently --kill-others-on-fail \"npm run build:compile\" \"npm run build:styleguide\"",

@@ -39,3 +39,7 @@ readdirSync(__dirname + '/../themed/components').forEach(component => {
 });
 
 writeFileSync(`${__dirname}/../.gitignore`, start + GITIGNORE_START + '\n\n' + newIgnoredFiles.join('\n') + '\n\n' + GITIGNORE_END + end);
+
+const pkg = JSON.parse(readFileSync(__dirname + '/../package.json', 'utf8'));
+pkg.files = requiredFiles;
+writeFileSync(__dirname + '/../package.json', JSON.stringify(pkg, null, '  ') + '\n');

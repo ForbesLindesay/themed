@@ -34,7 +34,9 @@ readdirSync(__dirname + '/../themed/components').forEach(component => {
   );
   writeFileSync(
     `${__dirname}/../${component}.d.ts`,
-    `export * from './themed/components/${component}/${component}';`
+    `export * from './themed/components/${component}/${component}';\n` +
+    `import ${component} from './themed/components/${component}/${component}';\n` +
+    `export default ${component};`
   );
 });
 

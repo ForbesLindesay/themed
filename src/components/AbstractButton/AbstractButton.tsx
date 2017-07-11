@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from '../../styled-components';
 import Style from '../../Style';
 import {StyledComponentClass} from '../../styled-components';
-import Theme from '../../theme';
+import Theme from '../../Theme';
 
 // Typescript needs these names to be exported, because they are implicitly used
 export {StyledComponentClass, Theme};

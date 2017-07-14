@@ -18,7 +18,7 @@ export default interface Style {
    */
   flexShrink?: 0 | 1 | 2 | 3 | 4;
   
-  fontSize: string;
+  fontSize?: string;
 
   margin?: any;
   marginTop?: any;

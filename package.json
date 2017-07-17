@@ -13,9 +13,16 @@
     "Container.js",
     "Container.d.ts",
     "Jumbotron.js",
-    "Jumbotron.d.ts"
+    "Jumbotron.d.ts",
+    "NumberInput.js",
+    "NumberInput.d.ts",
+    "TextInput.js",
+    "TextInput.d.ts",
+    "UTCDateTimeInput.js",
+    "UTCDateTimeInput.d.ts"
   ],
   "scripts": {
+    "precommit": "lint-staged",
     "build": "npm run build:clean && concurrently --kill-others-on-fail \"npm run build:compile\" \"npm run build:styleguide\"",
     "build:clean": "concurrently --kill-others-on-fail \"rimraf themed styleguide dev prod\" \"node ./scripts/copy-to-output --clean\"",
     "build:compile": "npm run build:tsc && npm run build:babel && npm run build:output",
@@ -25,8 +32,17 @@
     "build:babel:prod": "cross-env NODE_ENV=production babel themed --out-dir prod",
     "build:output": "node ./scripts/copy-to-output",
     "build:styleguide": "styleguidist build",
+    "prettier:base": "prettier --parser typescript --single-quote --trailing-comma all --no-bracket-spacing",
+    "prettier": "npm run prettier:base -- --write \"src/**/*.ts*\"",
+    "prettier:check": "npm run prettier:base -- --list-different \"src/**/*.ts*\"",
     "test": "jest",
     "start": "styleguidist server"
+  },
+  "lint-staged": {
+    "*.ts*": [
+      "npm run prettier:base -- --write",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -51,6 +67,7 @@
     "happypack": "^4.0.0-beta.1",
     "jest": "^20.0.4",
     "jest-styled-components": "^3.1.5",
+    "prettier": "^1.5.3",
     "react": "^15.5.4",
     "react-docgen-typescript": "0.0.15",
     "react-dom": "^15.5.4",
@@ -66,6 +83,8 @@
     "@types/node": "^8.0.8",
     "@types/react": "^15.0.33",
     "@types/react-dom": "^15.5.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.2",
     "polished": "^1.2.1",
     "styled-components": "^2.1.1"
   }

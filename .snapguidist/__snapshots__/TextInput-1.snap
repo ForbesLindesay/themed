@@ -1,0 +1,164 @@
+exports[`TextInput-1 1`] = `
+<form>
+  <label
+    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    <span
+      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      Text field
+    </span>
+    <input
+      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
+      name="myText"
+      type="text"
+      value="" />
+    <p
+      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+      Enter no more than 3 characters
+    </p>
+  </label>
+  <label
+    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    <span
+      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      Search field
+    </span>
+    <input
+      className="TextInput__TextInputStyled-s1s3sdzr-2 gRlyVx"
+      name="mySearch"
+      type="search"
+      value="" />
+    <p
+      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+       
+    </p>
+  </label>
+  <label
+    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    <span
+      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      Email field
+    </span>
+    <input
+      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
+      name="myEmail"
+      type="email"
+      value="" />
+    <p
+      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+      Please enter a valid e-mail address
+    </p>
+  </label>
+  <label
+    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    <span
+      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      URL field
+    </span>
+    <input
+      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
+      name="myURL"
+      type="url"
+      value="" />
+    <p
+      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+      Please enter a valid, absolute url
+    </p>
+  </label>
+  <label
+    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    <span
+      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      Password field
+    </span>
+    <input
+      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
+      name="myPassword"
+      type="password"
+      value="" />
+    <p
+      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+       
+    </p>
+  </label>
+  <label
+    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    <span
+      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      Date field
+    </span>
+    <input
+      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
+      name="myDate"
+      type="date"
+      value="" />
+    <p
+      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+      Please enter a valid date
+    </p>
+  </label>
+  <label
+    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    <span
+      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      Time field
+    </span>
+    <input
+      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
+      name="myTime"
+      type="time"
+      value="" />
+    <p
+      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+      Please enter a valid time
+    </p>
+  </label>
+  <pre>
+    <code>
+      {
+        \"myText\": null,
+        \"mySearch\": null,
+        \"myEmail\": null,
+        \"myURL\": null,
+        \"myPassword\": null,
+        \"myDate\": null,
+        \"myTime\": null
+      }
+    </code>
+  </pre>
+</form>
+`;

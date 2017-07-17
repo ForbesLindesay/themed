@@ -10,16 +10,13 @@ export interface ButtonVariantStyle {
   padding?: string;
   shadowStyle?: ButtonShadowStyle;
 }
-type ButtonTheme = (
-  ButtonVariantStyle &
-  {
-    Primary?: ButtonVariantStyle,
-    Secondary?: ButtonVariantStyle,
-    Success?: ButtonVariantStyle,
-    Info?: ButtonVariantStyle,
-    Warning?: ButtonVariantStyle,
-    Danger?: ButtonVariantStyle,
-    Link?: ButtonVariantStyle,
-  }
-);
+type ButtonTheme = ButtonVariantStyle & {
+  Primary?: ButtonVariantStyle;
+  Secondary?: ButtonVariantStyle;
+  Success?: ButtonVariantStyle;
+  Info?: ButtonVariantStyle;
+  Warning?: ButtonVariantStyle;
+  Danger?: ButtonVariantStyle;
+  Link?: ButtonVariantStyle;
+};
 export default ButtonTheme;

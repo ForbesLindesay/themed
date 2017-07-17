@@ -1,6 +1,9 @@
 import * as React from 'react';
 import styled from '../../styled-components';
-import AbstractButton, {AbstractButtonProps, setLinkRenderer} from '../AbstractButton/AbstractButton';
+import AbstractButton, {
+  AbstractButtonProps,
+  setLinkRenderer,
+} from '../AbstractButton/AbstractButton';
 import Style from '../../Style';
 import Theme from '../../Theme';
 import {ButtonVariantStyle} from './ButtonTheme';
@@ -25,9 +28,16 @@ export const enum ButtonVariant {
   Link,
 }
 
-const ExtendedAbstractButton = (
-  {display, overrideTheme, variant, ...props}: AbstractButtonProps & {display: Display, overrideTheme?: ButtonVariantStyle, variant: ButtonVariant}
-) => <AbstractButton {...props} />;
+const ExtendedAbstractButton = ({
+  display,
+  overrideTheme,
+  variant,
+  ...props,
+}: AbstractButtonProps & {
+  display: Display;
+  overrideTheme?: ButtonVariantStyle;
+  variant: ButtonVariant;
+}) => <AbstractButton {...props} />;
 
 const EMPTY_STYLE = {};
 function getVariant(theme: Theme, variant: ButtonVariant): ButtonVariantStyle {
@@ -52,8 +62,23 @@ function getVariant(theme: Theme, variant: ButtonVariant): ButtonVariantStyle {
       return button.Link || EMPTY_STYLE;
   }
 }
-function buttonThemeProperty<T>(getter: (style: ButtonVariantStyle) => T | void, defaultValue: T | ((props: {overrideTheme?: ButtonVariantStyle, variant: ButtonVariant, theme: Theme}) => T)) {
-  return (props: {overrideTheme?: ButtonVariantStyle, variant: ButtonVariant, theme: Theme}) => {
+function buttonThemeProperty<T>(
+  getter: (style: ButtonVariantStyle) => T | void,
+  defaultValue:
+    | T
+    | ((
+        props: {
+          overrideTheme?: ButtonVariantStyle;
+          variant: ButtonVariant;
+          theme: Theme;
+        },
+      ) => T),
+) {
+  return (props: {
+    overrideTheme?: ButtonVariantStyle;
+    variant: ButtonVariant;
+    theme: Theme;
+  }) => {
     const override = props.overrideTheme || EMPTY_STYLE;
     const base = props.theme.Button || EMPTY_STYLE;
     const variant = getVariant(props.theme, props.variant);
@@ -79,34 +104,43 @@ function buttonThemeProperty<T>(getter: (style: ButtonVariantStyle) => T | void,
   };
 }
 
-const getBackground = buttonThemeProperty<string>(s => s.background, (props): string => {
-  switch (props.variant) {
-    case ButtonVariant.Primary:
-      return 'hsl(340, 60%, 65%)';
-    case ButtonVariant.Secondary:
-      return 'hsl(0, 0%, 90%)';
-    case ButtonVariant.Success:
-      return 'hsl(120, 39%, 54%)';
-    case ButtonVariant.Info:
-      return 'hsl(194, 66%, 61%)';
-    case ButtonVariant.Warning:
-      return 'hsl(35, 84%, 62%)';
-    case ButtonVariant.Danger:
-      return 'hsl(2, 64%, 58%)';
-    case ButtonVariant.Link:
-      return 'none';
-  }
-});
-const getShadowStyle = buttonThemeProperty<ButtonShadowStyle>(s => s.shadowStyle, ButtonShadowStyle.Hovering);
-const getBorderColor = buttonThemeProperty<string>(s => s.borderColor, (props): string => {
-  // if (props.variant === ButtonVariant.Secondary) {
-  //   return darken(0.2, getBackground(props));
-  // }
-  if (props.variant === ButtonVariant.Link) {
+const getBackground = buttonThemeProperty<string>(
+  s => s.background,
+  (props): string => {
+    switch (props.variant) {
+      case ButtonVariant.Primary:
+        return 'hsl(340, 60%, 65%)';
+      case ButtonVariant.Secondary:
+        return 'hsl(0, 0%, 90%)';
+      case ButtonVariant.Success:
+        return 'hsl(120, 39%, 54%)';
+      case ButtonVariant.Info:
+        return 'hsl(194, 66%, 61%)';
+      case ButtonVariant.Warning:
+        return 'hsl(35, 84%, 62%)';
+      case ButtonVariant.Danger:
+        return 'hsl(2, 64%, 58%)';
+      case ButtonVariant.Link:
+        return 'none';
+    }
+  },
+);
+const getShadowStyle = buttonThemeProperty<ButtonShadowStyle>(
+  s => s.shadowStyle,
+  ButtonShadowStyle.Hovering,
+);
+const getBorderColor = buttonThemeProperty<string>(
+  s => s.borderColor,
+  (props): string => {
+    // if (props.variant === ButtonVariant.Secondary) {
+    //   return darken(0.2, getBackground(props));
+    // }
+    if (props.variant === ButtonVariant.Link) {
+      return 'transparent';
+    }
     return 'transparent';
-  }
-  return 'transparent';
-});
+  },
+);
 const getPadding = buttonThemeProperty<string>(s => s.padding, '.4em .8em');
 const StyledButton = styled(ExtendedAbstractButton)`
   background: ${getBackground};
@@ -131,18 +165,19 @@ const StyledButton = styled(ExtendedAbstractButton)`
     }
   }};
   box-sizing: border-box;
-  color: ${
-    buttonThemeProperty<string>(s => s.color, (p): string => {
+  color: ${buttonThemeProperty<string>(
+    s => s.color,
+    (p): string => {
       switch (p.variant) {
         case ButtonVariant.Secondary:
-          return 'black'
+          return 'black';
         case ButtonVariant.Link:
           return 'blue';
         default:
           return 'white';
       }
-    })
-  };
+    },
+  )};
   cursor: pointer;
   display: ${props => props.display};
   font: inherit;
@@ -165,33 +200,47 @@ const StyledButton = styled(ExtendedAbstractButton)`
     outline: none;
   }
   &:focus:not(:active) {
-    border-color: ${buttonThemeProperty<string>(s => s.focusBorderColor, (props): string => {
-      if (props.variant === ButtonVariant.Link) {
-        return 'transparent';
-      }
-      const defaultBorder = getBorderColor(props);
-      return darken(0.2, defaultBorder === 'transparent' ? getBackground(props) : defaultBorder);
-    })};
-    text-decoration: ${props => props.variant === ButtonVariant.Link ? 'underline' : 'none'};
+    border-color: ${buttonThemeProperty<string>(
+      s => s.focusBorderColor,
+      (props): string => {
+        if (props.variant === ButtonVariant.Link) {
+          return 'transparent';
+        }
+        const defaultBorder = getBorderColor(props);
+        return darken(
+          0.2,
+          defaultBorder === 'transparent'
+            ? getBackground(props)
+            : defaultBorder,
+        );
+      },
+    )};
+    text-decoration: ${props =>
+      props.variant === ButtonVariant.Link ? 'underline' : 'none'};
   }
   &:active {
-    background-color: ${buttonThemeProperty<string>(s => s.activeBackground, (props): string => {
-      if (props.variant === ButtonVariant.Link) {
-        return 'none';
-      }
-      return darken(0.3, getBackground(props));
-    })};
+    background-color: ${buttonThemeProperty<string>(
+      s => s.activeBackground,
+      (props): string => {
+        if (props.variant === ButtonVariant.Link) {
+          return 'none';
+        }
+        return darken(0.3, getBackground(props));
+      },
+    )};
     box-shadow: none;
   }
 `;
 
-export type ClickEvent = React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>;
+export type ClickEvent = React.MouseEvent<
+  HTMLButtonElement | HTMLAnchorElement
+>;
 export interface Props {
-  children: React.ReactNode,
+  children: React.ReactNode;
   /**
    * You can optionally add a `data-test-id` for use in automated tests.
    */
-  'data-test-id'?: string,
+  'data-test-id'?: string;
   /**
    * foo bar
    */
@@ -217,15 +266,15 @@ export interface Props {
   /**
    * You can optionall pass a `type` to enable the default browser behaviour for that button type.
    */
-  type?: 'submit' | 'reset' | 'button',
+  type?: 'submit' | 'reset' | 'button';
   /**
    * Variants indicate the different styles of button, they do not change the functionality.
    */
-  variant?: ButtonVariant,
+  variant?: ButtonVariant;
   /**
    * An event handler, called when the button is clicked.
    */
-  onClick?: (e: ClickEvent) => void,
+  onClick?: (e: ClickEvent) => void;
 }
 
 /**
@@ -255,25 +304,32 @@ export {setLinkRenderer};
 export default Button;
 
 export interface VariantProps {
-  children: React.ReactNode,
-  'data-test-id'?: string,
+  children: React.ReactNode;
+  'data-test-id'?: string;
   display?: Display;
   href?: string;
   style?: Style;
   overrideTheme?: ButtonVariantStyle;
   to?: string;
-  type?: 'submit' | 'reset' | 'button',
-  onClick?: (e: ClickEvent) => void,
+  type?: 'submit' | 'reset' | 'button';
+  onClick?: (e: ClickEvent) => void;
 }
 function getDisplayName(variant: ButtonVariant): string {
   switch (variant) {
-    case ButtonVariant.Primary: return 'PrimaryButton';
-    case ButtonVariant.Secondary: return 'SecondaryButton';
-    case ButtonVariant.Success: return 'SuccessButton';
-    case ButtonVariant.Info: return 'InfoButton';
-    case ButtonVariant.Warning: return 'WarningButton';
-    case ButtonVariant.Danger: return 'DangerButton';
-    case ButtonVariant.Link: return 'LinkButton';
+    case ButtonVariant.Primary:
+      return 'PrimaryButton';
+    case ButtonVariant.Secondary:
+      return 'SecondaryButton';
+    case ButtonVariant.Success:
+      return 'SuccessButton';
+    case ButtonVariant.Info:
+      return 'InfoButton';
+    case ButtonVariant.Warning:
+      return 'WarningButton';
+    case ButtonVariant.Danger:
+      return 'DangerButton';
+    case ButtonVariant.Link:
+      return 'LinkButton';
   }
 }
 function variant(variant: ButtonVariant) {

@@ -1,0 +1,76 @@
+exports[`UTCDateTimeInput-1 1`] = `
+<form>
+  <label
+    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    <span
+      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      Date Time
+    </span>
+    <input
+      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
+      name="myDateTime"
+      type="datetime-local"
+      value="" />
+    <p
+      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+       
+    </p>
+  </label>
+  <label
+    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    <span
+      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      Summer Time
+    </span>
+    <input
+      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
+      name="summer"
+      type="datetime-local"
+      value="2017-06-01T14:00:00" />
+    <p
+      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+       
+    </p>
+  </label>
+  <label
+    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    <span
+      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      Winter Time
+    </span>
+    <input
+      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
+      name="winter"
+      type="datetime-local"
+      value="2017-12-01T13:00:00" />
+    <p
+      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+       
+    </p>
+  </label>
+  <pre>
+    <code>
+      {
+        \"myDateTime\": null,
+        \"summer\": \"2017-06-01T13:00:00.000Z\",
+        \"winter\": \"2017-12-01T13:00:00.000Z\"
+      }
+    </code>
+  </pre>
+</form>
+`;

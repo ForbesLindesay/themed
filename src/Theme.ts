@@ -4,4 +4,4 @@ import JumbotronTheme from './components/Jumbotron/JumbotronTheme';
 export default interface Theme {
   Button?: ButtonTheme;
   Jumbotron?: JumbotronTheme;
-}
+};

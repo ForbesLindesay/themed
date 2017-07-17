@@ -3,4 +3,4 @@ export default interface JumbotronTheme {
   padding?: string;
   backgroundColor?: string;
   borderRadius?: string;
-}
+};

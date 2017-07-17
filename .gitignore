@@ -41,5 +41,11 @@ package-lock.json
 /Container.d.ts
 /Jumbotron.js
 /Jumbotron.d.ts
+/NumberInput.js
+/NumberInput.d.ts
+/TextInput.js
+/TextInput.d.ts
+/UTCDateTimeInput.js
+/UTCDateTimeInput.d.ts
 
 # end output modules

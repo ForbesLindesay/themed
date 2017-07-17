@@ -1,0 +1,26 @@
+exports[`CheckboxInput-1 1`] = `
+<form>
+  <label
+    className="Input__TextLabel-sfuakt-2 bbbiJd">
+    <span
+      className="Input__TextLabelName-sfuakt-3 dxvDBE">
+      Text field
+    </span>
+    <input
+      className="Input__TextInputStyled-sfuakt-4 jfaidm"
+      name="myText"
+      value="" />
+  </label>
+  <label
+    className="Input__TextLabel-sfuakt-2 bbbiJd">
+    <span
+      className="Input__TextLabelName-sfuakt-3 dxvDBE">
+      Search field
+    </span>
+    <input
+      className="Input__TextInputStyled-sfuakt-4 jfaidm"
+      name="mySearch"
+      value="" />
+  </label>
+</form>
+`;

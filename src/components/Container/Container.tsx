@@ -11,8 +11,7 @@ const FluidStyledContainer = styled.div`
 `;
 const StyledContainer = styled(FluidStyledContainer)`
   max-width: 1140px;
-`
-
+`;
 
 export interface ContainerProps {
   children?: React.ReactNode;
@@ -23,11 +22,19 @@ export interface ContainerProps {
 /**
  * A container to add margin on the left and right of a page.
  */
-export const Container = ({children, fluid = false, style}: ContainerProps) =>  {
+export const Container = ({children, fluid = false, style}: ContainerProps) => {
   if (fluid) {
-    return <FluidStyledContainer style={style}>{children}</FluidStyledContainer>;
+    return (
+      <FluidStyledContainer style={style}>
+        {children}
+      </FluidStyledContainer>
+    );
   }
-  return <StyledContainer style={style}>{children}</StyledContainer>;
+  return (
+    <StyledContainer style={style}>
+      {children}
+    </StyledContainer>
+  );
 };
 
 export default Container;

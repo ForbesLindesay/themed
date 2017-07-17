@@ -15,7 +15,7 @@ export interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
 export type LinkRenderer = (props: LinkProps) => JSX.Element | null | false;
 
 const defaultLink = ({to, replace, ...props}: LinkProps) => {
-  return <a {...props} href={to}/>;
+  return <a {...props} href={to} />;
 };
 let renderLink: LinkRenderer = defaultLink;
 
@@ -24,14 +24,16 @@ export function setLinkRenderer(renderer: LinkRenderer) {
 }
 
 export interface AbstractButtonProps {
-  children: React.ReactNode,
-  className?: string,
-  'data-test-id'?: string,
-  href?: string,
-  style?: Style,
-  to?: string,
-  type?: 'submit' | 'reset' | 'button',
-  onClick?: (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void,
+  children: React.ReactNode;
+  className?: string;
+  'data-test-id'?: string;
+  href?: string;
+  style?: Style;
+  to?: string;
+  type?: 'submit' | 'reset' | 'button';
+  onClick?: (
+    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+  ) => void;
 }
 /**
  * Abstract button functionality so that the styling is only needed once
@@ -42,10 +44,10 @@ export class AbstractButton extends React.Component<AbstractButtonProps, {}> {
     if (this.props.onClick) {
       this.props.onClick(e);
     }
-  }
+  };
   _onMouseUp = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     e.currentTarget.blur();
-  }
+  };
   render() {
     const props = this.props;
     if (props.to) {

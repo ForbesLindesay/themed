@@ -7,7 +7,7 @@ exports[`Button-11 1`] = `
     }
   }>
   <button
-    className="Button__StyledButton-s1uynn61-0 hIWsji AbstractButton-as2i6-0 grcywE"
+    className="Button__StyledButton-vzm0lb-0 bvTNJz AbstractButton-as2i6-0 grcywE"
     style={
       Object {
         "marginBottom": "8px",
@@ -17,7 +17,7 @@ exports[`Button-11 1`] = `
     Primary
   </button>
   <button
-    className="Button__StyledButton-s1uynn61-0 doJNgz AbstractButton-as2i6-0 grcywE"
+    className="Button__StyledButton-vzm0lb-0 jYrxaR AbstractButton-as2i6-0 grcywE"
     style={
       Object {
         "marginBottom": "8px",
@@ -27,7 +27,7 @@ exports[`Button-11 1`] = `
     Secondary
   </button>
   <button
-    className="Button__StyledButton-s1uynn61-0 eziZua AbstractButton-as2i6-0 grcywE"
+    className="Button__StyledButton-vzm0lb-0 lmQLwi AbstractButton-as2i6-0 grcywE"
     style={
       Object {
         "marginBottom": "8px",
@@ -37,7 +37,7 @@ exports[`Button-11 1`] = `
     Success
   </button>
   <button
-    className="Button__StyledButton-s1uynn61-0 fprPyZ AbstractButton-as2i6-0 grcywE"
+    className="Button__StyledButton-vzm0lb-0 ozyrc AbstractButton-as2i6-0 grcywE"
     style={
       Object {
         "marginBottom": "8px",
@@ -47,7 +47,7 @@ exports[`Button-11 1`] = `
     Info
   </button>
   <button
-    className="Button__StyledButton-s1uynn61-0 dOPNxi AbstractButton-as2i6-0 grcywE"
+    className="Button__StyledButton-vzm0lb-0 coFcfO AbstractButton-as2i6-0 grcywE"
     style={
       Object {
         "marginBottom": "8px",
@@ -57,7 +57,7 @@ exports[`Button-11 1`] = `
     Warning
   </button>
   <button
-    className="Button__StyledButton-s1uynn61-0 dXpaOf AbstractButton-as2i6-0 grcywE"
+    className="Button__StyledButton-vzm0lb-0 gnaDUo AbstractButton-as2i6-0 grcywE"
     style={
       Object {
         "marginBottom": "8px",
@@ -67,7 +67,7 @@ exports[`Button-11 1`] = `
     Danger
   </button>
   <button
-    className="Button__StyledButton-s1uynn61-0 gyLQFz AbstractButton-as2i6-0 grcywE"
+    className="Button__StyledButton-vzm0lb-0 gdaZuN AbstractButton-as2i6-0 grcywE"
     type="button">
     Link
   </button>

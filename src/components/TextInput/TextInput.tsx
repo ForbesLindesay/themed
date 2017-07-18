@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from '../../styled-components';
+import styled, {css} from '../../styled-components';
 
 export const enum InputMode {
   Normal,
@@ -31,17 +31,22 @@ const TextLabelName = styled.span`
   display: inline-block;
   margin-bottom: 0.4em;
 `;
-function AbstractTextInput({
+function AbstractTextInputContainer({
   hasError,
+  type,
+  focused,
   ...props,
-}: React.ChangeTargetHTMLProps<HTMLInputElement> & {hasError: boolean}) {
-  return <input {...props} />;
+}: React.HTMLAttributes<HTMLDivElement> & {
+  type: string;
+  hasError: boolean;
+  focused: boolean;
+}) {
+  return <div {...props} />;
 }
-const TextInputStyled = styled(AbstractTextInput)`
-  display: block;
+const TextInputContainer = styled(AbstractTextInputContainer)`
+  display: flex;
   width: 100%;
   box-sizing: border-box;
-  padding: .5em .75em;
   font-size: 1em;
   color: hsl(200, 4%, 29%);
   background-color: white;
@@ -50,12 +55,22 @@ const TextInputStyled = styled(AbstractTextInput)`
   border-radius: ${// make search always render as a pill shaped input
   props => (props.type === 'search' ? '100vw' : '.25em')};
 
+  padding: .5em .75em;
   // for validation states
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-  :invalid {
-    border-color: red;
-  }
+  ${props =>
+    props.focused ? css`box-shadow: rgb(68, 0, 255) 0 0 10px 0px;` : ``}
 `;
+const TextInputStyled = styled.input`
+  display: block;
+  flex-grow: 1;
+  font-size: 1em;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+`;
+
 const ValidationMessage = styled.p`
   color: red;
   transition: opacity ease-in-out .15s, box-shadow ease-in-out .15s,
@@ -92,35 +107,55 @@ export interface InputProps {
    * Error message to be displayed when `hasError=true`
    */
   errorMessage?: string;
+  prefix?: string;
+  suffix?: string;
   /**
    * A callback called on change with `{name: string, value: string | null}`
    */
   onChange: (e: ChangeEvent) => void;
 }
 
-export const TextInput = (props: InputProps) => {
-  return (
-    <TextLabel>
-      <TextLabelName>
-        {props.label}
-      </TextLabelName>
-      <TextInputStyled
-        type={props.type || 'text'}
-        name={props.name}
-        value={props.value || ''}
-        hasError={props.hasError || false}
-        onChange={e =>
-          props.onChange({
-            name: e.currentTarget.name,
-            value: e.currentTarget.value || null,
-          })}
-      />
-      <ValidationMessage style={{opacity: props.hasError ? 1 : 0}}>
-        {props.errorMessage || '\u00A0'}
-      </ValidationMessage>
-    </TextLabel>
-  );
-};
+export class TextInput extends React.Component<InputProps, {focused: boolean}> {
+  state = {focused: false};
+  _onFocus = () => {
+    this.setState({focused: true});
+  };
+  _onBlur = () => {
+    this.setState({focused: false});
+  };
+  render() {
+    return (
+      <TextLabel>
+        <TextLabelName>
+          {this.props.label}
+        </TextLabelName>
+        <TextInputContainer
+          type={this.props.type || 'text'}
+          hasError={this.props.hasError || false}
+          focused={this.state.focused}
+        >
+          {this.props.prefix || null}
+          <TextInputStyled
+            type={this.props.type || 'text'}
+            name={this.props.name}
+            value={this.props.value || ''}
+            onChange={e =>
+              this.props.onChange({
+                name: e.currentTarget.name,
+                value: e.currentTarget.value || null,
+              })}
+            onFocus={this._onFocus}
+            onBlur={this._onBlur}
+          />
+          {this.props.suffix || null}
+        </TextInputContainer>
+        <ValidationMessage style={{opacity: this.props.hasError ? 1 : 0}}>
+          {this.props.errorMessage || '\u00A0'}
+        </ValidationMessage>
+      </TextLabel>
+    );
+  }
+}
 
 export interface TextInputProps {
   mode?: InputMode;
@@ -129,16 +164,18 @@ export interface TextInputProps {
   value: string | null;
   hasError?: boolean;
   errorMessage?: string;
+  prefix?: string;
+  suffix?: string;
   onChange: (e: {name: string; value: string | null}) => void;
 }
 
 function createTextInput(type: InputType, defaultErrorMessage?: string) {
   const Input = (props: TextInputProps) =>
-    TextInput({
-      ...props,
-      type,
-      errorMessage: props.errorMessage || defaultErrorMessage,
-    });
+    <TextInput
+      {...props}
+      type={type}
+      errorMessage={props.errorMessage || defaultErrorMessage}
+    />;
   if (process.env.NODE_ENV === 'development') {
     (Input as any).displayName =
       type[0].toUpperCase() + type.substr(1) + 'Input';

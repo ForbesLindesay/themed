@@ -1,3 +1,4 @@
+import * as React from 'react';
 import TextInput, {InputMode, InputType} from '../TextInput/TextInput';
 
 export interface UTCDateTimeProps {
@@ -7,16 +8,20 @@ export interface UTCDateTimeProps {
   value: string | null;
   hasError?: boolean;
   errorMessage?: string;
+  prefix?: string;
+  suffix?: string;
   onChange: (e: {name: string; value: string | null}) => void;
 }
 
 export const UTCDateTimeInput = (props: UTCDateTimeProps) => {
-  return TextInput({
-    ...props,
-    type: InputType.localDateTime,
-    value: toLocalDateTime(props.value),
-    onChange: e => props.onChange({...e, value: toUtcDateTime(e.value)}),
-  });
+  return (
+    <TextInput
+      {...props}
+      type={InputType.localDateTime}
+      value={toLocalDateTime(props.value)}
+      onChange={e => props.onChange({...e, value: toUtcDateTime(e.value)})}
+    />
+  );
 };
 export default UTCDateTimeInput;
 

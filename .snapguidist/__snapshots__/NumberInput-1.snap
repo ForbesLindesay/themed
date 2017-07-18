@@ -1,18 +1,21 @@
 exports[`NumberInput-1 1`] = `
 <form>
   <label
-    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
     <span
-      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
       Date Time
     </span>
-    <input
-      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
-      name="myNumber"
-      type="tel"
-      value="42" />
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="myNumber"
+        type="tel"
+        value="42" />
+    </div>
     <p
-      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
       style={
         Object {
           "opacity": 0,

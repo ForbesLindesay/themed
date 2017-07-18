@@ -1,18 +1,21 @@
 exports[`UTCDateTimeInput-1 1`] = `
 <form>
   <label
-    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
     <span
-      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
       Date Time
     </span>
-    <input
-      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
-      name="myDateTime"
-      type="datetime-local"
-      value="" />
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="myDateTime"
+        type="datetime-local"
+        value="" />
+    </div>
     <p
-      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
       style={
         Object {
           "opacity": 0,
@@ -22,18 +25,21 @@ exports[`UTCDateTimeInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
     <span
-      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
       Summer Time
     </span>
-    <input
-      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
-      name="summer"
-      type="datetime-local"
-      value="2017-06-01T14:00:00" />
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="summer"
+        type="datetime-local"
+        value="2017-06-01T14:00:00" />
+    </div>
     <p
-      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
       style={
         Object {
           "opacity": 0,
@@ -43,18 +49,21 @@ exports[`UTCDateTimeInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
     <span
-      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
       Winter Time
     </span>
-    <input
-      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
-      name="winter"
-      type="datetime-local"
-      value="2017-12-01T13:00:00" />
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="winter"
+        type="datetime-local"
+        value="2017-12-01T13:00:00" />
+    </div>
     <p
-      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
       style={
         Object {
           "opacity": 0,

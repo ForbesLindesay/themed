@@ -1,0 +1,54 @@
+exports[`TextInput-3 1`] = `
+<form>
+  <label
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
+    <span
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
+      Slug
+    </span>
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="slug"
+        type="text"
+        value="" />
+      .example.com
+    </div>
+    <p
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+       
+    </p>
+  </label>
+  <label
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
+    <span
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
+      Time
+    </span>
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      Local Time: 
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="time"
+        type="time"
+        value="" />
+    </div>
+    <p
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+      Please enter a valid time
+    </p>
+  </label>
+</form>
+`;

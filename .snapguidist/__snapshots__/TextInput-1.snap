@@ -1,18 +1,21 @@
 exports[`TextInput-1 1`] = `
 <form>
   <label
-    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
     <span
-      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
       Text field
     </span>
-    <input
-      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
-      name="myText"
-      type="text"
-      value="" />
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="myText"
+        type="text"
+        value="" />
+    </div>
     <p
-      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
       style={
         Object {
           "opacity": 0,
@@ -22,18 +25,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
     <span
-      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
       Search field
     </span>
-    <input
-      className="TextInput__TextInputStyled-s1s3sdzr-2 gRlyVx"
-      name="mySearch"
-      type="search"
-      value="" />
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 lhBelk">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="mySearch"
+        type="search"
+        value="" />
+    </div>
     <p
-      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
       style={
         Object {
           "opacity": 0,
@@ -43,18 +49,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
     <span
-      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
       Email field
     </span>
-    <input
-      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
-      name="myEmail"
-      type="email"
-      value="" />
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="myEmail"
+        type="email"
+        value="" />
+    </div>
     <p
-      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
       style={
         Object {
           "opacity": 0,
@@ -64,18 +73,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
     <span
-      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
       URL field
     </span>
-    <input
-      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
-      name="myURL"
-      type="url"
-      value="" />
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="myURL"
+        type="url"
+        value="" />
+    </div>
     <p
-      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
       style={
         Object {
           "opacity": 0,
@@ -85,18 +97,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
     <span
-      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
       Password field
     </span>
-    <input
-      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
-      name="myPassword"
-      type="password"
-      value="" />
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="myPassword"
+        type="password"
+        value="" />
+    </div>
     <p
-      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
       style={
         Object {
           "opacity": 0,
@@ -106,18 +121,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
     <span
-      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
       Date field
     </span>
-    <input
-      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
-      name="myDate"
-      type="date"
-      value="" />
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="myDate"
+        type="date"
+        value="" />
+    </div>
     <p
-      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
       style={
         Object {
           "opacity": 0,
@@ -127,18 +145,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-s1s3sdzr-0 yJJAT">
+    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
     <span
-      className="TextInput__TextLabelName-s1s3sdzr-1 jNrnaE">
+      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
       Time field
     </span>
-    <input
-      className="TextInput__TextInputStyled-s1s3sdzr-2 daQXbY"
-      name="myTime"
-      type="time"
-      value="" />
+    <div
+      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      <input
+        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        name="myTime"
+        type="time"
+        value="" />
+    </div>
     <p
-      className="TextInput__ValidationMessage-s1s3sdzr-3 bwUaiH"
+      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
       style={
         Object {
           "opacity": 0,

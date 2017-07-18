@@ -9,37 +9,37 @@ exports[`Button-21 1`] = `
       }
     }>
     <button
-      className="Button__StyledButton-s1uynn61-0 eFycGa AbstractButton-as2i6-0 grcywE"
+      className="Button__StyledButton-vzm0lb-0 hRDKgG AbstractButton-as2i6-0 grcywE"
       type="button">
       Primary
     </button>
     <button
-      className="Button__StyledButton-s1uynn61-0 kOMWEx AbstractButton-as2i6-0 grcywE"
+      className="Button__StyledButton-vzm0lb-0 kSejIY AbstractButton-as2i6-0 grcywE"
       type="button">
       Secondary
     </button>
     <button
-      className="Button__StyledButton-s1uynn61-0 eRBjwt AbstractButton-as2i6-0 grcywE"
+      className="Button__StyledButton-vzm0lb-0 hQOrmn AbstractButton-as2i6-0 grcywE"
       type="button">
       Success
     </button>
     <button
-      className="Button__StyledButton-s1uynn61-0 gwcYVP AbstractButton-as2i6-0 grcywE"
+      className="Button__StyledButton-vzm0lb-0 akBlN AbstractButton-as2i6-0 grcywE"
       type="button">
       Info
     </button>
     <button
-      className="Button__StyledButton-s1uynn61-0 dIOWEB AbstractButton-as2i6-0 grcywE"
+      className="Button__StyledButton-vzm0lb-0 jEmTbn AbstractButton-as2i6-0 grcywE"
       type="button">
       Warning
     </button>
     <button
-      className="Button__StyledButton-s1uynn61-0 iwaCaV AbstractButton-as2i6-0 grcywE"
+      className="Button__StyledButton-vzm0lb-0 bGxQUx AbstractButton-as2i6-0 grcywE"
       type="button">
       Danger
     </button>
     <button
-      className="Button__StyledButton-s1uynn61-0 bejgVJ AbstractButton-as2i6-0 grcywE"
+      className="Button__StyledButton-vzm0lb-0 iCtyuI AbstractButton-as2i6-0 grcywE"
       type="button">
       Link
     </button>
@@ -52,7 +52,7 @@ exports[`Button-21 1`] = `
       }
     }>
     <button
-      className="Button__StyledButton-s1uynn61-0 eFycGa AbstractButton-as2i6-0 grcywE"
+      className="Button__StyledButton-vzm0lb-0 hRDKgG AbstractButton-as2i6-0 grcywE"
       style={
         Object {
           "fontSize": "4em",

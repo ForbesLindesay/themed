@@ -44,3 +44,34 @@ class Form extends React.Component {
 
 <Form />
 ```
+
+### With a Suffix/prefix
+
+```example
+const {LocalTimeInput} = require('./TextInput');
+class Form extends React.Component {
+  constructor(...args) {
+    super(...args);
+    this.state = {slug: null, time: null};
+    this._onChange = e => {
+      this.setState({[e.name]: e.value});
+    };
+  }
+  render() {
+    return (
+      <form>
+        <TextInput
+          label="Slug"
+          name="slug"
+          value={this.state.slug}
+          suffix=".example.com"
+          onChange={this._onChange}
+        />
+        <LocalTimeInput label="Time" name="time" value={this.state.time} prefix="Local Time: " onChange={this._onChange} />
+      </form>
+    );
+  }
+}
+
+<Form />
+```

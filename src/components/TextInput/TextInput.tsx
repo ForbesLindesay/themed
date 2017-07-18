@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled, {css} from '../../styled-components';
+import Label from '../Label/Label';
 
 export const enum InputMode {
   Normal,
@@ -22,15 +23,6 @@ export const enum InputType {
   number = 'tel',
 }
 
-const TextLabel = styled.label`
-  display: block;
-  margin-bottom: 1em;
-  touch-action: manipulation;
-`;
-const TextLabelName = styled.span`
-  display: inline-block;
-  margin-bottom: 0.4em;
-`;
 function AbstractTextInputContainer({
   hasError,
   type,
@@ -69,12 +61,6 @@ const TextInputStyled = styled.input`
   background: none;
   border: none;
   outline: none;
-`;
-
-const ValidationMessage = styled.p`
-  color: red;
-  transition: opacity ease-in-out .15s, box-shadow ease-in-out .15s,
-    -webkit-box-shadow ease-in-out .15s;
 `;
 
 export interface ChangeEvent {
@@ -126,10 +112,11 @@ export class TextInput extends React.Component<InputProps, {focused: boolean}> {
   };
   render() {
     return (
-      <TextLabel>
-        <TextLabelName>
-          {this.props.label}
-        </TextLabelName>
+      <Label
+        label={this.props.label}
+        hasError={this.props.hasError}
+        errorMessage={this.props.errorMessage}
+      >
         <TextInputContainer
           type={this.props.type || 'text'}
           hasError={this.props.hasError || false}
@@ -151,10 +138,7 @@ export class TextInput extends React.Component<InputProps, {focused: boolean}> {
           />
           {this.props.suffix || null}
         </TextInputContainer>
-        <ValidationMessage style={{opacity: this.props.hasError ? 1 : 0}}>
-          {this.props.errorMessage || '\u00A0'}
-        </ValidationMessage>
-      </TextLabel>
+      </Label>
     );
   }
 }

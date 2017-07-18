@@ -37,10 +37,14 @@ package-lock.json
 
 /Button.js
 /Button.d.ts
+/ColorInput.js
+/ColorInput.d.ts
 /Container.js
 /Container.d.ts
 /Jumbotron.js
 /Jumbotron.d.ts
+/Label.js
+/Label.d.ts
 /NumberInput.js
 /NumberInput.d.ts
 /TextInput.js

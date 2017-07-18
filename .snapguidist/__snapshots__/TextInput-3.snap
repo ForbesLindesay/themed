@@ -1,22 +1,22 @@
 exports[`TextInput-3 1`] = `
 <form>
   <label
-    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
+    className="Label__TextLabel-vi4hym-0 jXEHlv">
     <span
-      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
+      className="Label__TextLabelName-vi4hym-1 eCjIqc">
       Slug
     </span>
     <div
-      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
       <input
-        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
         name="slug"
         type="text"
         value="" />
       .example.com
     </div>
     <p
-      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
+      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
       style={
         Object {
           "opacity": 0,
@@ -26,22 +26,22 @@ exports[`TextInput-3 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
+    className="Label__TextLabel-vi4hym-0 jXEHlv">
     <span
-      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
+      className="Label__TextLabelName-vi4hym-1 eCjIqc">
       Time
     </span>
     <div
-      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
       Local Time: 
       <input
-        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
         name="time"
         type="time"
         value="" />
     </div>
     <p
-      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
+      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
       style={
         Object {
           "opacity": 0,

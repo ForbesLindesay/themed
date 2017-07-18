@@ -1,21 +1,21 @@
 exports[`TextInput-1 1`] = `
 <form>
   <label
-    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
+    className="Label__TextLabel-vi4hym-0 jXEHlv">
     <span
-      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
+      className="Label__TextLabelName-vi4hym-1 eCjIqc">
       Text field
     </span>
     <div
-      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
       <input
-        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
         name="myText"
         type="text"
         value="" />
     </div>
     <p
-      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
+      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
       style={
         Object {
           "opacity": 0,
@@ -25,21 +25,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
+    className="Label__TextLabel-vi4hym-0 jXEHlv">
     <span
-      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
+      className="Label__TextLabelName-vi4hym-1 eCjIqc">
       Search field
     </span>
     <div
-      className="TextInput__TextInputContainer-ojbxtw-2 lhBelk">
+      className="TextInput__TextInputContainer-s66btii-0 iLWGmn">
       <input
-        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
         name="mySearch"
         type="search"
         value="" />
     </div>
     <p
-      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
+      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
       style={
         Object {
           "opacity": 0,
@@ -49,21 +49,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
+    className="Label__TextLabel-vi4hym-0 jXEHlv">
     <span
-      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
+      className="Label__TextLabelName-vi4hym-1 eCjIqc">
       Email field
     </span>
     <div
-      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
       <input
-        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
         name="myEmail"
         type="email"
         value="" />
     </div>
     <p
-      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
+      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
       style={
         Object {
           "opacity": 0,
@@ -73,21 +73,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
+    className="Label__TextLabel-vi4hym-0 jXEHlv">
     <span
-      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
+      className="Label__TextLabelName-vi4hym-1 eCjIqc">
       URL field
     </span>
     <div
-      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
       <input
-        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
         name="myURL"
         type="url"
         value="" />
     </div>
     <p
-      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
+      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
       style={
         Object {
           "opacity": 0,
@@ -97,21 +97,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
+    className="Label__TextLabel-vi4hym-0 jXEHlv">
     <span
-      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
+      className="Label__TextLabelName-vi4hym-1 eCjIqc">
       Password field
     </span>
     <div
-      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
       <input
-        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
         name="myPassword"
         type="password"
         value="" />
     </div>
     <p
-      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
+      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
       style={
         Object {
           "opacity": 0,
@@ -121,21 +121,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
+    className="Label__TextLabel-vi4hym-0 jXEHlv">
     <span
-      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
+      className="Label__TextLabelName-vi4hym-1 eCjIqc">
       Date field
     </span>
     <div
-      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
       <input
-        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
         name="myDate"
         type="date"
         value="" />
     </div>
     <p
-      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
+      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
       style={
         Object {
           "opacity": 0,
@@ -145,21 +145,21 @@ exports[`TextInput-1 1`] = `
     </p>
   </label>
   <label
-    className="TextInput__TextLabel-ojbxtw-0 jOXkMF">
+    className="Label__TextLabel-vi4hym-0 jXEHlv">
     <span
-      className="TextInput__TextLabelName-ojbxtw-1 hoETtL">
+      className="Label__TextLabelName-vi4hym-1 eCjIqc">
       Time field
     </span>
     <div
-      className="TextInput__TextInputContainer-ojbxtw-2 cvaDda">
+      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
       <input
-        className="TextInput__TextInputStyled-ojbxtw-3 jpyTVt"
+        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
         name="myTime"
         type="time"
         value="" />
     </div>
     <p
-      className="TextInput__ValidationMessage-ojbxtw-4 bxkZgB"
+      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
       style={
         Object {
           "opacity": 0,

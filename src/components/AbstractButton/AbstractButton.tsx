@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from '../../styled-components';
-import Style from '../../Style';
 import {StyledComponentClass} from '../../styled-components';
 import Theme from '../../Theme';
 
@@ -28,7 +27,7 @@ export interface AbstractButtonProps {
   className?: string;
   'data-test-id'?: string;
   href?: string;
-  style?: Style;
+  style?: any;
   to?: string;
   type?: 'submit' | 'reset' | 'button';
   onClick?: (

@@ -10,10 +10,14 @@
     "prod/",
     "Button.js",
     "Button.d.ts",
+    "ColorInput.js",
+    "ColorInput.d.ts",
     "Container.js",
     "Container.d.ts",
     "Jumbotron.js",
     "Jumbotron.d.ts",
+    "Label.js",
+    "Label.d.ts",
     "NumberInput.js",
     "NumberInput.d.ts",
     "TextInput.js",
@@ -82,10 +86,12 @@
   "dependencies": {
     "@types/node": "^8.0.8",
     "@types/react": "^15.0.33",
+    "@types/react-color": "^2.11.4",
     "@types/react-dom": "^15.5.1",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.2",
     "polished": "^1.2.1",
+    "react-color": "^2.13.1",
     "styled-components": "^2.1.1"
   }
 }

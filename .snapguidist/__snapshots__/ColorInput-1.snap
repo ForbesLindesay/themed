@@ -1,0 +1,45 @@
+exports[`ColorInput-1 1`] = `
+<form>
+  <div
+    className="sc-bdVaJa jftRTf">
+    <span
+      className="Label__TextLabelName-vi4hym-1 eCjIqc">
+      Color
+    </span>
+    <button
+      className="ColorInput__Button-y96irt-0 Xvglo AbstractButton-as2i6-0 grcywE"
+      style={
+        Object {
+          "background": "#663399",
+        }
+      }
+      type="button">
+       
+    </button>
+    <p
+      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }>
+       
+    </p>
+  </div>
+  <pre
+    style={
+      Object {
+        "border": "5px solid",
+        "borderColor": "#663399",
+        "borderRadius": "1em",
+        "padding": "1em",
+      }
+    }>
+    <code>
+      {
+        \"color\": \"#663399\"
+      }
+    </code>
+  </pre>
+</form>
+`;

@@ -10,6 +10,7 @@ export interface UTCDateTimeProps {
   errorMessage?: string;
   prefix?: string;
   suffix?: string;
+  placeholder?: string;
   onChange: (e: {name: string; value: string | null}) => void;
 }
 

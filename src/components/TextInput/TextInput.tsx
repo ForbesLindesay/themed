@@ -109,6 +109,7 @@ export interface InputProps {
   errorMessage?: string;
   prefix?: string;
   suffix?: string;
+  placeholder?: string;
   /**
    * A callback called on change with `{name: string, value: string | null}`
    */
@@ -139,6 +140,7 @@ export class TextInput extends React.Component<InputProps, {focused: boolean}> {
             type={this.props.type || 'text'}
             name={this.props.name}
             value={this.props.value || ''}
+            placeholder={this.props.placeholder}
             onChange={e =>
               this.props.onChange({
                 name: e.currentTarget.name,
@@ -166,6 +168,7 @@ export interface TextInputProps {
   errorMessage?: string;
   prefix?: string;
   suffix?: string;
+  placeholder?: string;
   onChange: (e: {name: string; value: string | null}) => void;
 }
 

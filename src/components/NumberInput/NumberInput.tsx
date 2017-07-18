@@ -6,6 +6,7 @@ export interface NumberInputProps {
   label?: string;
   name: string;
   value: number | null;
+  placeholder?: string;
   onChange: (e: {name: string; value: number | null}) => void;
 }
 export const NumberInput = (props: NumberInputProps) => {

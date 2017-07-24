@@ -8,6 +8,8 @@
     "types/",
     "dev/",
     "prod/",
+    "AbstractButton.js",
+    "AbstractButton.d.ts",
     "Button.js",
     "Button.d.ts",
     "ColorInput.js",

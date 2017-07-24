@@ -35,6 +35,8 @@ package-lock.json
 
 # begin output modules
 
+/AbstractButton.js
+/AbstractButton.d.ts
 /Button.js
 /Button.d.ts
 /ColorInput.js

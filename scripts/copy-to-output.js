@@ -23,7 +23,6 @@ if (process.argv.includes('--clean')) {
 const newIgnoredFiles = [];
 const requiredFiles = ["themed/", "types/", "dev/", "prod/"];
 readdirSync(__dirname + '/../themed/components').forEach(component => {
-  if (/^abstract/i.test(component)) return;
   newIgnoredFiles.push(`/${component}.js`);
   newIgnoredFiles.push(`/${component}.d.ts`);
   requiredFiles.push(`${component}.js`);

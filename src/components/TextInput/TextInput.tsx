@@ -188,5 +188,9 @@ export const LocalTimeInput = createTextInput(
   InputType.localTime,
   'Please enter a valid time',
 );
+export const NumberInput = createTextInput(
+  InputType.number,
+  'Please enter a valid number',
+);
 
 export default TextInput;

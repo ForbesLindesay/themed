@@ -10,7 +10,7 @@ import {AbstractLabelTextProps} from './components/AbstractLabelText/AbstractLab
 import {AbstractValidationMessageProps} from './components/AbstractValidationMessage/AbstractValidationMessage';
 import {ButtonProps} from './components/Button/Button';
 
-export enum ThemableComponents {
+export const enum ThemableComponents {
   Button,
   FormGroup,
   InputBox,

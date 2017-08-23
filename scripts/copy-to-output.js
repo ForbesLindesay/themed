@@ -20,8 +20,8 @@ oldIgnoredFiles.forEach(oldFile => {
 if (process.argv.includes('--clean')) {
   process.exit(0);
 }
-const newIgnoredFiles = [];
-const requiredFiles = ["themed/", "types/", "dev/", "prod/"];
+const newIgnoredFiles = ['/Theme.js', '/Theme.d.ts'];
+const requiredFiles = ["themed/", "types/", "dev/", "prod/", 'Theme.js', 'Theme.d.ts'];
 readdirSync(__dirname + '/../themed/components').forEach(component => {
   newIgnoredFiles.push(`/${component}.js`);
   newIgnoredFiles.push(`/${component}.d.ts`);
@@ -38,6 +38,33 @@ readdirSync(__dirname + '/../themed/components').forEach(component => {
     `export default ${component};`
   );
 });
+readdirSync(__dirname + '/../themed/enums').forEach(fileName => {
+  const component = fileName.split('.')[0];
+  newIgnoredFiles.push(`/${component}.js`);
+  newIgnoredFiles.push(`/${component}.d.ts`);
+  requiredFiles.push(`${component}.js`);
+  requiredFiles.push(`${component}.d.ts`);
+  writeFileSync(
+    `${__dirname}/../${component}.js`,
+    `module.exports = process.env.NODE_ENV === 'development' ? require('./dev/enums/${component}.js') : require('./prod/enums/${component}.js')`
+  );
+  writeFileSync(
+    `${__dirname}/../${component}.d.ts`,
+    `export * from './themed/enums/${component}';\n` +
+    `import ${component} from './themed/enums/${component}';\n` +
+    `export default ${component};`
+  );
+});
+
+writeFileSync(
+  `${__dirname}/../Theme.js`,
+  `module.exports = process.env.NODE_ENV === 'development' ? require('./dev/Theme.js') : require('./prod/Theme.js')`
+);
+writeFileSync(
+  `${__dirname}/../Theme.d.ts`,
+  `import defineTheme from './themed/Theme';\n` +
+  `export default defineTheme;`
+);
 
 writeFileSync(`${__dirname}/../.gitignore`, start + GITIGNORE_START + '\n\n' + newIgnoredFiles.join('\n') + '\n\n' + GITIGNORE_END + end);
 

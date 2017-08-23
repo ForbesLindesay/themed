@@ -35,6 +35,8 @@ package-lock.json
 
 # begin output modules
 
+/Theme.js
+/Theme.d.ts
 /AbstractButton.js
 /AbstractButton.d.ts
 /AbstractForm.js
@@ -71,5 +73,13 @@ package-lock.json
 /UTCDateTimeInput.d.ts
 /ValidationMessage.js
 /ValidationMessage.d.ts
+/InputType.js
+/InputType.d.ts
+/InputType.js
+/InputType.d.ts
+/LabelMode.js
+/LabelMode.d.ts
+/LabelMode.js
+/LabelMode.d.ts
 
 # end output modules

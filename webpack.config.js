@@ -8,9 +8,7 @@ module.exports = {
 		path: path.resolve(__dirname, 'build'),
 	},
 	resolve: {
-		alias: {
-			'themed/ThemeProvider': path.resolve(__dirname, 'src/ThemeProvider.ts'),
-		},
+		alias: {},
 		// Add '.ts' and '.tsx' as resolvable extensions.
 		extensions: [".ts", ".tsx", ".js", ".json"],
 	},

@@ -2,13 +2,13 @@ exports[`Button-13 1`] = `
 <p>
   You can put a 
   <a
-    className="Button__StyledButton-vzm0lb-0 caFqfw AbstractButton-as2i6-0 grcywE"
+    className="Button__InlineLinkButton-s11d147o-1 kxShXR AbstractButton-yv1oh8-0 jZWmzk"
     href="#">
     link
   </a>
    or 
   <button
-    className="Button__StyledButton-vzm0lb-0 caFqfw AbstractButton-as2i6-0 grcywE"
+    className="Button__InlineLinkButton-s11d147o-1 kxShXR AbstractButton-yv1oh8-0 jZWmzk"
     type="button">
     button
   </button>

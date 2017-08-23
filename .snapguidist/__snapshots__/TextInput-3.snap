@@ -1,54 +1,50 @@
 exports[`TextInput-3 1`] = `
 <form>
   <label
-    className="Label__TextLabel-vi4hym-0 jXEHlv">
+    className="AbstractFormGroup-tkngu1-0 fEUGRx">
     <span
-      className="Label__TextLabelName-vi4hym-1 eCjIqc">
+      className="AbstractLabelText-s23cj7l-0 cskoKL"
+      style={Object {}}>
       Slug
     </span>
     <div
-      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
-      <input
-        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
-        name="slug"
-        type="text"
-        value="" />
-      .example.com
+      style={Object {}}>
+      <div
+        className="AbstractInputBox-s1jsyi13-0 Cgwuu">
+        <input
+          className="AbstractInputCore__StyledAbstractInputCore-d7obel-0 dQktlL"
+          name="slug"
+          type="text"
+          value="" />
+      </div>
+      <div
+        className="AbstractValidationMessage-wkt75j-0 ctiQvH">
+         
+      </div>
     </div>
-    <p
-      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
-      style={
-        Object {
-          "opacity": 0,
-        }
-      }>
-       
-    </p>
   </label>
   <label
-    className="Label__TextLabel-vi4hym-0 jXEHlv">
+    className="AbstractFormGroup-tkngu1-0 fEUGRx">
     <span
-      className="Label__TextLabelName-vi4hym-1 eCjIqc">
+      className="AbstractLabelText-s23cj7l-0 cskoKL"
+      style={Object {}}>
       Time
     </span>
     <div
-      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
-      Local Time: 
-      <input
-        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
-        name="time"
-        type="time"
-        value="" />
+      style={Object {}}>
+      <div
+        className="AbstractInputBox-s1jsyi13-0 Cgwuu">
+        <input
+          className="AbstractInputCore__StyledAbstractInputCore-d7obel-0 dQktlL"
+          name="time"
+          type="time"
+          value="" />
+      </div>
+      <div
+        className="AbstractValidationMessage-wkt75j-0 ctiQvH">
+        Please enter a valid time
+      </div>
     </div>
-    <p
-      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
-      style={
-        Object {
-          "opacity": 0,
-        }
-      }>
-      Please enter a valid time
-    </p>
   </label>
 </form>
 `;

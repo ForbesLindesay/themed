@@ -1,172 +1,165 @@
 exports[`TextInput-1 1`] = `
 <form>
   <label
-    className="Label__TextLabel-vi4hym-0 jXEHlv">
+    className="AbstractFormGroup-tkngu1-0 fEUGRx">
     <span
-      className="Label__TextLabelName-vi4hym-1 eCjIqc">
+      className="AbstractLabelText-s23cj7l-0 cskoKL"
+      style={Object {}}>
       Text field
     </span>
     <div
-      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
-      <input
-        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
-        name="myText"
-        type="text"
-        value="" />
+      style={Object {}}>
+      <div
+        className="AbstractInputBox-s1jsyi13-0 Cgwuu">
+        <input
+          className="AbstractInputCore__StyledAbstractInputCore-d7obel-0 dQktlL"
+          name="myText"
+          type="text"
+          value="" />
+      </div>
+      <div
+        className="AbstractValidationMessage-wkt75j-0 ctiQvH">
+         
+      </div>
     </div>
-    <p
-      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
-      style={
-        Object {
-          "opacity": 0,
-        }
-      }>
-      Enter no more than 3 characters
-    </p>
   </label>
   <label
-    className="Label__TextLabel-vi4hym-0 jXEHlv">
+    className="AbstractFormGroup-tkngu1-0 fEUGRx">
     <span
-      className="Label__TextLabelName-vi4hym-1 eCjIqc">
+      className="AbstractLabelText-s23cj7l-0 cskoKL"
+      style={Object {}}>
       Search field
     </span>
     <div
-      className="TextInput__TextInputContainer-s66btii-0 iLWGmn">
-      <input
-        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
-        name="mySearch"
-        type="search"
-        value="" />
+      style={Object {}}>
+      <div
+        className="AbstractInputBox-s1jsyi13-0 Cgwuu">
+        <input
+          className="AbstractInputCore__StyledAbstractInputCore-d7obel-0 dQktlL"
+          name="mySearch"
+          type="search"
+          value="" />
+      </div>
+      <div
+        className="AbstractValidationMessage-wkt75j-0 ctiQvH">
+         
+      </div>
     </div>
-    <p
-      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
-      style={
-        Object {
-          "opacity": 0,
-        }
-      }>
-       
-    </p>
   </label>
   <label
-    className="Label__TextLabel-vi4hym-0 jXEHlv">
+    className="AbstractFormGroup-tkngu1-0 fEUGRx">
     <span
-      className="Label__TextLabelName-vi4hym-1 eCjIqc">
+      className="AbstractLabelText-s23cj7l-0 cskoKL"
+      style={Object {}}>
       Email field
     </span>
     <div
-      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
-      <input
-        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
-        name="myEmail"
-        type="email"
-        value="" />
+      style={Object {}}>
+      <div
+        className="AbstractInputBox-s1jsyi13-0 Cgwuu">
+        <input
+          className="AbstractInputCore__StyledAbstractInputCore-d7obel-0 dQktlL"
+          name="myEmail"
+          type="email"
+          value="" />
+      </div>
+      <div
+        className="AbstractValidationMessage-wkt75j-0 ctiQvH">
+        Please enter a valid e-mail address
+      </div>
     </div>
-    <p
-      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
-      style={
-        Object {
-          "opacity": 0,
-        }
-      }>
-      Please enter a valid e-mail address
-    </p>
   </label>
   <label
-    className="Label__TextLabel-vi4hym-0 jXEHlv">
+    className="AbstractFormGroup-tkngu1-0 fEUGRx">
     <span
-      className="Label__TextLabelName-vi4hym-1 eCjIqc">
+      className="AbstractLabelText-s23cj7l-0 cskoKL"
+      style={Object {}}>
       URL field
     </span>
     <div
-      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
-      <input
-        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
-        name="myURL"
-        type="url"
-        value="" />
+      style={Object {}}>
+      <div
+        className="AbstractInputBox-s1jsyi13-0 Cgwuu">
+        <input
+          className="AbstractInputCore__StyledAbstractInputCore-d7obel-0 dQktlL"
+          name="myURL"
+          type="url"
+          value="" />
+      </div>
+      <div
+        className="AbstractValidationMessage-wkt75j-0 ctiQvH">
+        Please enter a valid, absolute url
+      </div>
     </div>
-    <p
-      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
-      style={
-        Object {
-          "opacity": 0,
-        }
-      }>
-      Please enter a valid, absolute url
-    </p>
   </label>
   <label
-    className="Label__TextLabel-vi4hym-0 jXEHlv">
+    className="AbstractFormGroup-tkngu1-0 fEUGRx">
     <span
-      className="Label__TextLabelName-vi4hym-1 eCjIqc">
+      className="AbstractLabelText-s23cj7l-0 cskoKL"
+      style={Object {}}>
       Password field
     </span>
     <div
-      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
-      <input
-        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
-        name="myPassword"
-        type="password"
-        value="" />
+      style={Object {}}>
+      <div
+        className="AbstractInputBox-s1jsyi13-0 Cgwuu">
+        <input
+          className="AbstractInputCore__StyledAbstractInputCore-d7obel-0 dQktlL"
+          name="myPassword"
+          type="password"
+          value="" />
+      </div>
+      <div
+        className="AbstractValidationMessage-wkt75j-0 ctiQvH">
+         
+      </div>
     </div>
-    <p
-      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
-      style={
-        Object {
-          "opacity": 0,
-        }
-      }>
-       
-    </p>
   </label>
   <label
-    className="Label__TextLabel-vi4hym-0 jXEHlv">
+    className="AbstractFormGroup-tkngu1-0 fEUGRx">
     <span
-      className="Label__TextLabelName-vi4hym-1 eCjIqc">
+      className="AbstractLabelText-s23cj7l-0 cskoKL"
+      style={Object {}}>
       Date field
     </span>
     <div
-      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
-      <input
-        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
-        name="myDate"
-        type="date"
-        value="" />
+      style={Object {}}>
+      <div
+        className="AbstractInputBox-s1jsyi13-0 Cgwuu">
+        <input
+          className="AbstractInputCore__StyledAbstractInputCore-d7obel-0 dQktlL"
+          name="myDate"
+          type="date"
+          value="" />
+      </div>
+      <div
+        className="AbstractValidationMessage-wkt75j-0 ctiQvH">
+        Please enter a valid date
+      </div>
     </div>
-    <p
-      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
-      style={
-        Object {
-          "opacity": 0,
-        }
-      }>
-      Please enter a valid date
-    </p>
   </label>
   <label
-    className="Label__TextLabel-vi4hym-0 jXEHlv">
+    className="AbstractFormGroup-tkngu1-0 fEUGRx">
     <span
-      className="Label__TextLabelName-vi4hym-1 eCjIqc">
+      className="AbstractLabelText-s23cj7l-0 cskoKL"
+      style={Object {}}>
       Time field
     </span>
     <div
-      className="TextInput__TextInputContainer-s66btii-0 hjpwKl">
-      <input
-        className="TextInput__TextInputStyled-s66btii-1 eTUroj"
-        name="myTime"
-        type="time"
-        value="" />
+      style={Object {}}>
+      <div
+        className="AbstractInputBox-s1jsyi13-0 Cgwuu">
+        <input
+          className="AbstractInputCore__StyledAbstractInputCore-d7obel-0 dQktlL"
+          name="myTime"
+          type="time"
+          value="" />
+      </div>
+      <div
+        className="AbstractValidationMessage-wkt75j-0 ctiQvH">
+        Please enter a valid time
+      </div>
     </div>
-    <p
-      className="Label__ValidationMessage-vi4hym-2 cUvzuP"
-      style={
-        Object {
-          "opacity": 0,
-        }
-      }>
-      Please enter a valid time
-    </p>
   </label>
   <pre>
     <code>

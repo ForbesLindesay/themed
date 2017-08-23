@@ -1,7 +1,10 @@
 import * as React from 'react';
-import styled from '../../styled-components';
-import Label from '../Label/Label';
+import styled from 'styled-components';
 import AbstractButton from '../AbstractButton/AbstractButton';
+import AbstractInput, {
+  AbstractInputBaseProps,
+  RenderInputProps,
+} from '../AbstractInput/AbstractInput';
 const {ChromePicker} = require('react-color');
 
 const Button = styled(AbstractButton)`
@@ -32,15 +35,12 @@ export interface ChangeEvent {
   name: string;
   value: string | null;
 }
-export interface ColorInputProps {
+
+export interface ColorInputExtraProps {
   /**
    * Set this to true to remove the alpha slider and options
    */
   disableAlpha?: boolean;
-  /**
-   * The human readable description of the field
-   */
-  label?: string;
   /**
    * A name, included in the callback
    */
@@ -48,20 +48,13 @@ export interface ColorInputProps {
   /**
    * The color in hex format
    */
-  value: string;
-  /**
-   * Should this element be rendered in the error state (red border and error message visible)
-   */
-  hasError?: boolean;
-  /**
-   * Error message to be displayed when `hasError=true`
-   */
-  errorMessage?: string;
+  value: string | null;
   /**
    * A callback called on change with `{name: string, value: string}`
    */
-  onChange: (e: ChangeEvent) => void;
+  onChange: (e: {name: string; value: string | null}) => void;
 }
+export type ColorInputProps = ColorInputExtraProps & AbstractInputBaseProps;
 
 export class ColorInput extends React.Component<
   ColorInputProps,
@@ -78,15 +71,17 @@ export class ColorInput extends React.Component<
   _onChange = (color: {hex: string}) => {
     this.props.onChange({name: this.props.name, value: color.hex});
   };
-  render() {
-    // We pass doNotUseLabel to disable the slightly odd behaviour that mouse clicks exhibit when inside labels
+
+  _renderInput = ({
+    focused,
+    labelMode,
+    validationMessage,
+    validationState,
+    onFocus,
+    onBlur,
+  }: RenderInputProps) => {
     return (
-      <Label
-        doNotUseLabel={true}
-        label={this.props.label}
-        hasError={this.props.hasError}
-        errorMessage={this.props.errorMessage}
-      >
+      <div>
         <Button style={{background: this.props.value}} onClick={this._onClick}>
           {' '}
         </Button>
@@ -101,7 +96,27 @@ export class ColorInput extends React.Component<
               />
             </Popover>
           : null}
-      </Label>
+      </div>
+    );
+  };
+
+  render() {
+    // We use a div to disable the slightly odd behaviour that mouse
+    // clicks exhibit when inside labels
+    return (
+      <AbstractInput
+        formGroupComponent="div"
+        inputContainerStyle={this.props.inputContainerStyle}
+        label={this.props.label}
+        labelMode={this.props.labelMode}
+        labelStyle={this.props.labelStyle}
+        required={this.props.required}
+        validationMessage={this.props.validationMessage}
+        validationState={this.props.validationState}
+        renderInput={this._renderInput}
+        onFocus={this.props.onFocus}
+        onBlur={this.props.onBlur}
+      />
     );
   }
 }

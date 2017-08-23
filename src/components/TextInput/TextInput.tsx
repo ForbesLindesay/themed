@@ -1,167 +1,24 @@
 import * as React from 'react';
-import styled, {css} from '../../styled-components';
-import Label from '../Label/Label';
+import {AbstractInputProps} from '../AbstractInput/AbstractInput';
+import AbstractTextInput from '../AbstractTextInput/AbstractTextInput';
+import InputType from '../../enums/InputType';
 
-export const enum InputMode {
-  Normal,
-  Row,
-  Inline,
-}
-
-export const enum InputType {
-  text = 'text',
-  search = 'search',
-  email = 'email',
-  url = 'url',
-  password = 'password',
-  date = 'date',
-  localTime = 'time',
-
-  // the rest of these have separate wrapper components
-  // for parsing/validating the values
-  localDateTime = 'datetime-local',
-  number = 'tel',
-}
-
-function AbstractTextInputContainer({
-  hasError,
-  type,
-  focused,
-  ...props,
-}: React.HTMLAttributes<HTMLDivElement> & {
-  type: string;
-  hasError: boolean;
-  focused: boolean;
-}) {
-  return <div {...props} />;
-}
-const TextInputContainer = styled(AbstractTextInputContainer)`
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 1em;
-  color: hsl(200, 4%, 29%);
-  background-color: white;
-  border: 1px solid;
-  border-color: ${props => (props.hasError ? 'red' : 'hsla(0, 0%, 0%, 0.15)')};
-  border-radius: ${// make search always render as a pill shaped input
-  props => (props.type === 'search' ? '100vw' : '.25em')};
-
-  padding: .5em .75em;
-  // for validation states
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-  ${props =>
-    props.focused ? css`box-shadow: rgb(68, 0, 255) 0 0 10px 0px;` : ``}
-`;
-const TextInputStyled = styled.input`
-  display: block;
-  flex-grow: 1;
-  font-size: 1em;
-  color: inherit;
-  background: none;
-  border: none;
-  outline: none;
-`;
-
-export interface ChangeEvent {
+export interface TextInputExtraProps {
   name: string;
   value: string | null;
-}
-export interface InputProps {
-  /**
-   * This property is for internal usage, please use the typed exports
-   */
-  type?: InputType;
-  mode?: InputMode;
-  /**
-   * The human readable description of the field
-   */
-  label?: string;
-  /**
-   * A name, included in the callback
-   */
-  name: string;
-  /**
-   * The value of the field, the empty string is always represented as `null` in callbacks
-   */
-  value: string | null;
-  /**
-   * Should this element be rendered in the error state (red border and error message visible)
-   */
-  hasError?: boolean;
-  /**
-   * Error message to be displayed when `hasError=true`
-   */
-  errorMessage?: string;
-  prefix?: string;
-  suffix?: string;
-  placeholder?: string;
-  /**
-   * A callback called on change with `{name: string, value: string | null}`
-   */
-  onChange: (e: ChangeEvent) => void;
-}
-
-export class TextInput extends React.Component<InputProps, {focused: boolean}> {
-  state = {focused: false};
-  _onFocus = () => {
-    this.setState({focused: true});
-  };
-  _onBlur = () => {
-    this.setState({focused: false});
-  };
-  render() {
-    return (
-      <Label
-        label={this.props.label}
-        hasError={this.props.hasError}
-        errorMessage={this.props.errorMessage}
-      >
-        <TextInputContainer
-          type={this.props.type || 'text'}
-          hasError={this.props.hasError || false}
-          focused={this.state.focused}
-        >
-          {this.props.prefix || null}
-          <TextInputStyled
-            type={this.props.type || 'text'}
-            name={this.props.name}
-            value={this.props.value || ''}
-            placeholder={this.props.placeholder}
-            onChange={e =>
-              this.props.onChange({
-                name: e.currentTarget.name,
-                value: e.currentTarget.value || null,
-              })}
-            onFocus={this._onFocus}
-            onBlur={this._onBlur}
-          />
-          {this.props.suffix || null}
-        </TextInputContainer>
-      </Label>
-    );
-  }
-}
-
-export interface TextInputProps {
-  mode?: InputMode;
-  label?: string;
-  name: string;
-  value: string | null;
-  hasError?: boolean;
-  errorMessage?: string;
-  prefix?: string;
-  suffix?: string;
   placeholder?: string;
   onChange: (e: {name: string; value: string | null}) => void;
 }
+export type TextInputProps = TextInputExtraProps & AbstractInputProps;
 
-function createTextInput(type: InputType, defaultErrorMessage?: string) {
+export {InputType};
+
+function createTextInput(type: InputType, defaultValidationMessage?: string) {
   const Input = (props: TextInputProps) =>
-    <TextInput
+    <AbstractTextInput
       {...props}
       type={type}
-      errorMessage={props.errorMessage || defaultErrorMessage}
+      validationMessage={props.validationMessage || defaultValidationMessage}
     />;
   if (process.env.NODE_ENV === 'development') {
     (Input as any).displayName =
@@ -170,6 +27,7 @@ function createTextInput(type: InputType, defaultErrorMessage?: string) {
   return Input;
 }
 
+export const TextInput = createTextInput(InputType.text);
 export const SearchInput = createTextInput(InputType.search);
 export const EmailInput = createTextInput(
   InputType.email,
@@ -191,6 +49,10 @@ export const LocalTimeInput = createTextInput(
 export const NumberInput = createTextInput(
   InputType.number,
   'Please enter a valid number',
+);
+export const LocalDateTimeInput = createTextInput(
+  InputType.localDateTime,
+  'Please enter a valid date and time',
 );
 
 export default TextInput;

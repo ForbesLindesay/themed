@@ -130,17 +130,17 @@ const {
 Link Buttons can be rendered inline in passages of text via:
 
 ```js
-import {LinkButton} from 'themed/Button';
+import {InlineLinkButton} from 'themed/Button';
 
-const btn = <LinkButton display="inline">Click Me!</LinkButton>;
+const btn = <InlineLinkButton display="inline">Click Me!</InlineLinkButton>;
 ```
 
 ```example
-const {LinkButton} = require('./Button');
+const {InlineLinkButton} = require('./Button');
 
 <p>
-  You can put a <LinkButton display="inline" href="#">link</LinkButton> or
-  <LinkButton display="inline" onClick={() => alert('Clicked!')}>button</LinkButton> inline
+  You can put a <InlineLinkButton href="#">link</InlineLinkButton> or
+  <InlineLinkButton onClick={() => alert('Clicked!')}>button</InlineLinkButton> inline
   in some text too! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Cras in tortor sapien. Sed eu aliquam mauris, id consectetur urna. Etiam ut rhoncus
   felis, sit amet tristique magna. Fusce sit amet feugiat dui. Integer consequat risus
@@ -148,192 +148,4 @@ const {LinkButton} = require('./Button');
   maximus felis sed cursus. Sed eu nulla iaculis, varius mauris sed, laoreet quam. Etiam a
   iaculis tortor, nec suscipit sapien.
 </p>
-```
-
-### Theme
-
-You can theme various properties via the `Button` object in your theme.
-
-Currently, you can theme:
-
- name             | type   | description
-------------------|--------|-----------
-activeBackground  | string | The background color when the button is being pressed. Defaults to slightly darker than the `background` when non-active.
-background        | string | The background color. By default, this varies depending on the `variant` you pass into the button.
-borderColor       | string | The border color. By default, the border matches the background, except for "secondary" buttons, where it is a light gray.
-borderRadius      | string | The border radius, defaults to `.2em`
-color             | string | The foground color, defaults to `white` except for "secondary" buttons, where it defaults to black.
-focusBorderColor  | string | The border color when the button is focused. This is important for accessibility for keyboard only users. It defaults to a darker version of the normal `borderColor`.
-shadowStyle       | `ButtonShadowStyle` | The shadow style lets you choose between raised, hovering and flat buttons.
-padding           | string | This lets you customise the button's padding
-
-#### Raised Buttons
-
-```example
-const ThemeProvider = require('themed/ThemeProvider').default;
-const {
-  PrimaryButton,
-  SecondaryButton,
-  SuccessButton,
-  InfoButton,
-  WarningButton,
-  DangerButton,
-  LinkButton,
-  ButtonShadowStyle,
-} = require('./Button');
-
-const theme = {
-  Button: {
-    shadowStyle: ButtonShadowStyle.Raised,
-  }
-};
-
-<ThemeProvider theme={theme}>
-  <div>
-    <div style={{display: 'flex', justifyContent: 'space-around', marginBottom: 16}}>
-      <PrimaryButton>Primary</PrimaryButton>
-      <SecondaryButton>Secondary</SecondaryButton>
-      <SuccessButton>Success</SuccessButton>
-      <InfoButton>Info</InfoButton>
-      <WarningButton>Warning</WarningButton>
-      <DangerButton>Danger</DangerButton>
-      <LinkButton>Link</LinkButton>
-    </div>
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-      <PrimaryButton style={{fontSize: '4em'}}>Large Button</PrimaryButton>
-    </div>
-  </div>
-</ThemeProvider>
-```
-
-#### Flat Buttons
-
-```example
-const ThemeProvider = require('themed/ThemeProvider').default;
-const {
-  PrimaryButton,
-  SecondaryButton,
-  SuccessButton,
-  InfoButton,
-  WarningButton,
-  DangerButton,
-  LinkButton,
-  ButtonShadowStyle,
-} = require('./Button');
-
-const theme = {
-  Button: {
-    shadowStyle: ButtonShadowStyle.None,
-  }
-};
-
-<ThemeProvider theme={theme}>
-  <div>
-    <div style={{display: 'flex', justifyContent: 'space-around', marginBottom: 16}}>
-      <PrimaryButton>Primary</PrimaryButton>
-      <SecondaryButton>Secondary</SecondaryButton>
-      <SuccessButton>Success</SuccessButton>
-      <InfoButton>Info</InfoButton>
-      <WarningButton>Warning</WarningButton>
-      <DangerButton>Danger</DangerButton>
-      <LinkButton>Link</LinkButton>
-    </div>
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-      <PrimaryButton style={{fontSize: '4em'}}>Large Button</PrimaryButton>
-    </div>
-  </div>
-</ThemeProvider>
-```
-
-#### Pill Buttons
-
-```example
-const ThemeProvider = require('themed/ThemeProvider').default;
-const {
-  PrimaryButton,
-  SecondaryButton,
-  SuccessButton,
-  InfoButton,
-  WarningButton,
-  DangerButton,
-  LinkButton,
-  ButtonShadowStyle,
-} = require('./Button');
-
-const theme = {
-  Button: {
-    // set the border radius to a high enough value that the browsers will truncate it
-    borderRadius: '1000em',
-    shadowStyle: ButtonShadowStyle.SoftRaised,
-  }
-};
-
-<ThemeProvider theme={theme}>
-  <div>
-    <div style={{display: 'flex', justifyContent: 'space-around', marginBottom: 16}}>
-      <PrimaryButton>Primary</PrimaryButton>
-      <SecondaryButton>Secondary</SecondaryButton>
-      <SuccessButton>Success</SuccessButton>
-      <InfoButton>Info</InfoButton>
-      <WarningButton>Warning</WarningButton>
-      <DangerButton>Danger</DangerButton>
-      <LinkButton>Link</LinkButton>
-    </div>
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-      <PrimaryButton style={{fontSize: '4em'}}>Large Button</PrimaryButton>
-    </div>
-  </div>
-</ThemeProvider>
-```
-
-#### Custom Colors
-
-```example
-const ThemeProvider = require('themed/ThemeProvider').default;
-const {
-  PrimaryButton,
-  SecondaryButton,
-  SuccessButton,
-  InfoButton,
-  WarningButton,
-  DangerButton,
-  LinkButton,
-} = require('./Button');
-
-const theme = {
-  Button: {
-    Primary: {
-      background: 'black',
-    },
-    Success: {
-      background: '#008000',
-    },
-    Info: {
-      background: 'blue',
-    },
-    Warning: {
-      background: 'orange',
-    },
-    Danger: {
-      background: 'red',
-    },
-  },
-};
-
-<ThemeProvider theme={theme}>
-  <div>
-    <div style={{display: 'flex', justifyContent: 'space-around', marginBottom: 16}}>
-      <PrimaryButton>Primary</PrimaryButton>
-      <SecondaryButton>Secondary</SecondaryButton>
-      <SuccessButton>Success</SuccessButton>
-      <InfoButton>Info</InfoButton>
-      <WarningButton>Warning</WarningButton>
-      <DangerButton>Danger</DangerButton>
-      <LinkButton>Link</LinkButton>
-    </div>
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-      <PrimaryButton style={{fontSize: '4em'}}>Large Button</PrimaryButton>
-    </div>
-  </div>
-</ThemeProvider>
 ```

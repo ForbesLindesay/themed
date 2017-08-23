@@ -28,7 +28,7 @@ results.forEach(entry => {
   output.push(`import {${entry.propsName}} from '${entry.filename}';`);
 });
 output.push(``);
-output.push(`export const enum ThemableComponents {`);
+output.push(`export enum ThemableComponents {`);
 results.forEach(entry => {
   output.push(`  ${entry.name},`);
 });

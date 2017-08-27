@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {AbstractInputProps} from '../AbstractInput/AbstractInput';
+import {AbstractInputBaseProps} from '../AbstractInput/AbstractInput';
 import AbstractTextInput from '../AbstractTextInput/AbstractTextInput';
 import InputType from '../../enums/InputType';
 
@@ -9,7 +9,7 @@ export interface TextInputExtraProps {
   placeholder?: string;
   onChange: (e: {name: string; value: string | null}) => void;
 }
-export type TextInputProps = TextInputExtraProps & AbstractInputProps;
+export type TextInputProps = TextInputExtraProps & AbstractInputBaseProps;
 
 export {InputType};
 

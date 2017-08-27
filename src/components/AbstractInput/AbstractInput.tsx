@@ -47,7 +47,7 @@ export interface AbstractInputProps {
   renderInput: (props: RenderInputProps) => React.ReactNode;
 
   formGroupComponent?: 'div' | 'label';
-  inputContainerStyle: React.CSSProperties;
+  inputContainerStyle?: React.CSSProperties;
   label: React.ReactNode;
   labelMode?: LabelMode;
   labelStyle?: React.CSSProperties;
@@ -59,13 +59,13 @@ export interface AbstractInputProps {
 }
 
 export interface AbstractInputBaseProps {
-  inputContainerStyle: React.CSSProperties;
+  inputContainerStyle?: React.CSSProperties;
   label: React.ReactNode;
   labelMode?: LabelMode;
   labelStyle?: React.CSSProperties;
   required?: boolean;
   validationMessage?: React.ReactNode;
-  validationState: ValidationState;
+  validationState?: ValidationState;
   onFocus?: () => void;
   onBlur?: () => void;
 }

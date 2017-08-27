@@ -1,6 +1,6 @@
 {
   "name": "themed",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Themed react components using styled-components",
   "main": "index.js",
   "files": [

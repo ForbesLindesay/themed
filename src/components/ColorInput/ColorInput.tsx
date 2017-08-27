@@ -4,8 +4,11 @@ import AbstractButton from '../AbstractButton/AbstractButton';
 import AbstractInput, {
   AbstractInputBaseProps,
   RenderInputProps,
+  ValidationState,
 } from '../AbstractInput/AbstractInput';
 const {ChromePicker} = require('react-color');
+
+export {ValidationState};
 
 const Button = styled(AbstractButton)`
   box-sizing: border-box;
@@ -112,7 +115,7 @@ export class ColorInput extends React.Component<
         labelStyle={this.props.labelStyle}
         required={this.props.required}
         validationMessage={this.props.validationMessage}
-        validationState={this.props.validationState}
+        validationState={this.props.validationState || ValidationState.Hidden}
         renderInput={this._renderInput}
         onFocus={this.props.onFocus}
         onBlur={this.props.onBlur}

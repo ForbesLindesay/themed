@@ -6,6 +6,8 @@ import ValidationMessage from '../ValidationMessage/ValidationMessage';
 import LabelMode from '../../enums/LabelMode';
 import {abstractComponentRegister} from '../../Theme';
 
+export {ValidationState};
+
 export interface RenderInputProps {
   focused: boolean;
   labelMode: LabelMode;

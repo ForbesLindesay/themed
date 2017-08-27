@@ -2,10 +2,13 @@ import * as React from 'react';
 import AbstractInput, {
   AbstractInputBaseProps,
   RenderInputProps,
+  ValidationState,
 } from '../AbstractInput/AbstractInput';
 import AbstractInputCore from '../AbstractInputCore/AbstractInputCore';
 import InputBox from '../InputBox/InputBox';
 import InputType from '../../enums/InputType';
+
+export {ValidationState};
 
 export interface AbstractTextInputExtraProps {
   type: InputType;
@@ -57,7 +60,7 @@ class AbstractTextInput extends React.Component<AbstractTextInputProps> {
         labelStyle={this.props.labelStyle}
         required={this.props.required}
         validationMessage={this.props.validationMessage}
-        validationState={this.props.validationState}
+        validationState={this.props.validationState || ValidationState.Hidden}
         renderInput={this._renderInput}
         onFocus={this.props.onFocus}
         onBlur={this.props.onBlur}

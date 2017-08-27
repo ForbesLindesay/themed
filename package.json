@@ -57,6 +57,7 @@
   ],
   "scripts": {
     "precommit": "lint-staged",
+    "prepublish": "npm run prettier:check && npm run build",
     "build": "npm run build:clean && npm run build:theme && concurrently --kill-others-on-fail \"npm run build:compile\" \"npm run build:styleguide\"",
     "build:theme": "node scripts/build && npm run prettier",
     "build:clean": "concurrently --kill-others-on-fail \"rimraf themed styleguide dev prod\" \"node ./scripts/copy-to-output --clean\"",

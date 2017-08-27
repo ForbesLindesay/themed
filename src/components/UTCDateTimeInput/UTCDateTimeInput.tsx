@@ -1,5 +1,8 @@
 import * as React from 'react';
 import {LocalDateTimeInput, TextInputProps} from '../TextInput/TextInput';
+import ValidationState from '../../enums/ValidationState';
+
+export {ValidationState};
 
 export type UTCDateTimeProps = TextInputProps;
 export const UTCDateTimeInput = (props: UTCDateTimeProps) => {

@@ -2,6 +2,9 @@ import * as React from 'react';
 import {AbstractInputBaseProps} from '../AbstractInput/AbstractInput';
 import AbstractTextInput from '../AbstractTextInput/AbstractTextInput';
 import InputType from '../../enums/InputType';
+import ValidationState from '../../enums/ValidationState';
+
+export {ValidationState};
 
 export interface TextInputExtraProps {
   name: string;

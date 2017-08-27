@@ -3,12 +3,12 @@
 import * as React from 'react';
 import styled, {css} from 'styled-components';
 import {StyledComponentClass} from 'styled-components';
-import {ValidationState} from '../AbstractValidationMessage/AbstractValidationMessage';
 import LabelMode from '../../enums/LabelMode';
-
-export {StyledComponentClass};
+import ValidationState from '../../enums/ValidationState';
 
 export {ValidationState};
+
+export {StyledComponentClass};
 
 export interface AbstractInputBoxProps {
   children: React.ReactNode;

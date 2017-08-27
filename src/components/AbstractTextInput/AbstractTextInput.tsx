@@ -2,11 +2,11 @@ import * as React from 'react';
 import AbstractInput, {
   AbstractInputBaseProps,
   RenderInputProps,
-  ValidationState,
 } from '../AbstractInput/AbstractInput';
 import AbstractInputCore from '../AbstractInputCore/AbstractInputCore';
 import InputBox from '../InputBox/InputBox';
 import InputType from '../../enums/InputType';
+import ValidationState from '../../enums/ValidationState';
 
 export {ValidationState};
 

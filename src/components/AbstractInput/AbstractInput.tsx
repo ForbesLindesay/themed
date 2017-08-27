@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {ValidationState} from '../AbstractValidationMessage/AbstractValidationMessage';
 import FormGroup from '../FormGroup/FormGroup';
 import LabelText from '../LabelText/LabelText';
 import ValidationMessage from '../ValidationMessage/ValidationMessage';
 import LabelMode from '../../enums/LabelMode';
 import {abstractComponentRegister} from '../../Theme';
+import ValidationState from '../../enums/ValidationState';
 
 export {ValidationState};
 

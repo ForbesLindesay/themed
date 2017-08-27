@@ -2,9 +2,11 @@
 
 import * as React from 'react';
 import styled, {StyledComponentClass} from 'styled-components';
-import {ValidationState} from '../AbstractValidationMessage/AbstractValidationMessage';
 import ScreenReaderOnly from '../ScreenReaderOnly/ScreenReaderOnly';
 import LabelMode from '../../enums/LabelMode';
+import ValidationState from '../../enums/ValidationState';
+
+export {ValidationState};
 
 export {StyledComponentClass};
 

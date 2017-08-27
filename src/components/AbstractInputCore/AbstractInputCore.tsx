@@ -2,7 +2,9 @@ import * as React from 'react';
 import styled from 'styled-components';
 import {StyledComponentClass} from 'styled-components';
 import InputType from '../../enums/InputType';
-import {ValidationState} from '../AbstractValidationMessage/AbstractValidationMessage';
+import ValidationState from '../../enums/ValidationState';
+
+export {ValidationState};
 
 export {InputType, StyledComponentClass};
 

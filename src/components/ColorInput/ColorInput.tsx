@@ -4,8 +4,8 @@ import AbstractButton from '../AbstractButton/AbstractButton';
 import AbstractInput, {
   AbstractInputBaseProps,
   RenderInputProps,
-  ValidationState,
 } from '../AbstractInput/AbstractInput';
+import ValidationState from '../../enums/ValidationState';
 const {ChromePicker} = require('react-color');
 
 export {ValidationState};

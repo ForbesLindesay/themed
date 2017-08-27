@@ -2,16 +2,12 @@
 
 import * as React from 'react';
 import styled, {css} from 'styled-components';
+import ValidationState from '../../enums/ValidationState';
 
 import {StyledComponentClass} from 'styled-components';
 export {StyledComponentClass};
 
-export enum ValidationState {
-  Hidden,
-  Success,
-  Info,
-  Failure,
-}
+export {ValidationState};
 
 export interface AbstractValidationMessageProps {
   children: React.ReactNode;

@@ -1,8 +1,8 @@
 import AbstractValidationMessage, {
-  ValidationState,
   AbstractValidationMessageProps,
 } from '../AbstractValidationMessage/AbstractValidationMessage';
 import {abstractComponentRegister, ThemableComponents} from '../../Theme';
+import ValidationState from '../../enums/ValidationState';
 
 export {
   ValidationState,

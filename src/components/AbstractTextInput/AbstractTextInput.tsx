@@ -15,6 +15,8 @@ export interface AbstractTextInputExtraProps {
   name: string;
   value: string | null;
   placeholder?: string;
+  prefix?: React.ReactNode;
+  suffix?: React.ReactNode;
   onChange: (e: {name: string; value: string | null}) => void;
 }
 export type AbstractTextInputProps = AbstractTextInputExtraProps &
@@ -36,6 +38,7 @@ class AbstractTextInput extends React.Component<AbstractTextInputProps> {
         validationMessage={validationMessage}
         validationState={validationState}
       >
+        {this.props.prefix}
         <AbstractInputCore
           type={this.props.type}
           name={this.props.name}
@@ -47,6 +50,7 @@ class AbstractTextInput extends React.Component<AbstractTextInputProps> {
           onFocus={onFocus}
           onBlur={onBlur}
         />
+        {this.props.suffix}
       </InputBox>
     );
   };

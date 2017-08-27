@@ -10,6 +10,8 @@ export interface TextInputExtraProps {
   name: string;
   value: string | null;
   placeholder?: string;
+  prefix?: React.ReactNode;
+  suffix?: React.ReactNode;
   onChange: (e: {name: string; value: string | null}) => void;
 }
 export type TextInputProps = TextInputExtraProps & AbstractInputBaseProps;

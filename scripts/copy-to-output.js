@@ -62,7 +62,8 @@ writeFileSync(
 );
 writeFileSync(
   `${__dirname}/../Theme.d.ts`,
-  `import defineTheme from './themed/Theme';\n` +
+  `import defineTheme, {ThemableComponents} from './themed/Theme';\n\n` +
+  `export {ThemableComponents};\n` +
   `export default defineTheme;`
 );
 

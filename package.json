@@ -79,10 +79,7 @@
     "start": "styleguidist server"
   },
   "lint-staged": {
-    "*.ts*": [
-      "npm run prettier:base -- --write",
-      "git add"
-    ]
+    "*.ts*": ["npm run prettier:base -- --write", "git add"]
   },
   "repository": {
     "type": "git",
@@ -95,6 +92,8 @@
   },
   "homepage": "https://github.com/themed-react/themed#readme",
   "devDependencies": {
+    "@types/react": "^15.0.33",
+    "@types/react-dom": "^15.5.1",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.1.1",
     "babel-plugin-styled-components": "^1.1.7",
@@ -122,9 +121,7 @@
   },
   "dependencies": {
     "@types/node": "^8.0.8",
-    "@types/react": "^15.0.33",
     "@types/react-color": "^2.11.4",
-    "@types/react-dom": "^15.5.1",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.2",
     "polished": "^1.2.1",

@@ -17,7 +17,7 @@ output.push(`// to regenerate this file, run "npm run build:theme"`);
 output.push(`// do not edit by hand`);
 output.push(``);
 
-output.push(`import {ComponentClass, StatelessComponent} from 'react';`);
+output.push(`import * as React from 'react';`);
 output.push(`import {ThemedOuterStyledProps} from 'styled-components';`);
 const loadedFiles = {};
 results.forEach(entry => {
@@ -35,15 +35,23 @@ results.forEach(entry => {
 output.push(`}`);
 
 output.push(``);
+output.push(`export type ComponentClass<TProps, Theme> =`);
+output.push(`  React.ComponentClass<ThemedOuterStyledProps<TProps, Theme>>`);
+output.push(`export type StatelessComponent<TProps, Theme> =`);
+output.push(
+  `  React.StatelessComponent<ThemedOuterStyledProps<TProps, Theme>>`,
+);
 output.push(`export type Component<TProps, Theme> =`);
-output.push(`  | ComponentClass<ThemedOuterStyledProps<TProps, Theme>>`);
-output.push(`  | StatelessComponent<ThemedOuterStyledProps<TProps, Theme>>`);
+output.push(`  | ComponentClass<TProps, Theme>`);
+output.push(`  | StatelessComponent<TProps, Theme>`);
 
 output.push(`export interface BaseThemeRegister<Theme> {`);
 results.forEach(entry => {
   output.push(`  register(`);
   output.push(`    component: ThemableComponents.${entry.name},`);
-  output.push(`    theme: ((abstractValidationmessage: Component<${entry.propsName}, Theme>) => Component<${entry.propsName}, Theme>),`)
+  output.push(
+    `    theme: ((abstractValidationmessage: ComponentClass<${entry.propsName}, Theme>) => Component<${entry.propsName}, Theme>),`,
+  );
   output.push(`  ): this;`);
 });
 output.push(`}`);
@@ -54,11 +62,8 @@ results.forEach(entry => {
   output.push(`  registerAbstractComponent(`);
   output.push(`    component: ThemableComponents.${entry.name},`);
   output.push(`    implementation: Component<${entry.propsName}, any>,`);
-  output.push(`  ): Component<${entry.propsName}, any>`);
+  output.push(`  ): StatelessComponent<${entry.propsName}, any>`);
 });
 output.push(`}`);
 output.push(``);
-fs.writeFileSync(
-  __dirname + '/../src/GeneratedTheme.tsx',
-  output.join('\n'),
-);
+fs.writeFileSync(__dirname + '/../src/GeneratedTheme.tsx', output.join('\n'));

@@ -1,7 +1,7 @@
 // to regenerate this file, run "npm run build:theme"
 // do not edit by hand
 
-import {ComponentClass, StatelessComponent} from 'react';
+import * as React from 'react';
 import {ThemedOuterStyledProps} from 'styled-components';
 import {AbstractButtonProps} from './components/AbstractButton/AbstractButton';
 import {AbstractFormGroupProps} from './components/AbstractFormGroup/AbstractFormGroup';
@@ -26,38 +26,44 @@ export enum ThemableComponents {
   InlineLinkButton,
 }
 
+export type ComponentClass<TProps, Theme> = React.ComponentClass<
+  ThemedOuterStyledProps<TProps, Theme>
+>;
+export type StatelessComponent<TProps, Theme> = React.StatelessComponent<
+  ThemedOuterStyledProps<TProps, Theme>
+>;
 export type Component<TProps, Theme> =
-  | ComponentClass<ThemedOuterStyledProps<TProps, Theme>>
-  | StatelessComponent<ThemedOuterStyledProps<TProps, Theme>>;
+  | ComponentClass<TProps, Theme>
+  | StatelessComponent<TProps, Theme>;
 export interface BaseThemeRegister<Theme> {
   register(
     component: ThemableComponents.Button,
     theme: ((
-      abstractValidationmessage: Component<AbstractButtonProps, Theme>,
+      abstractValidationmessage: ComponentClass<AbstractButtonProps, Theme>,
     ) => Component<AbstractButtonProps, Theme>),
   ): this;
   register(
     component: ThemableComponents.FormGroup,
     theme: ((
-      abstractValidationmessage: Component<AbstractFormGroupProps, Theme>,
+      abstractValidationmessage: ComponentClass<AbstractFormGroupProps, Theme>,
     ) => Component<AbstractFormGroupProps, Theme>),
   ): this;
   register(
     component: ThemableComponents.InputBox,
     theme: ((
-      abstractValidationmessage: Component<AbstractInputBoxProps, Theme>,
+      abstractValidationmessage: ComponentClass<AbstractInputBoxProps, Theme>,
     ) => Component<AbstractInputBoxProps, Theme>),
   ): this;
   register(
     component: ThemableComponents.LabelText,
     theme: ((
-      abstractValidationmessage: Component<AbstractLabelTextProps, Theme>,
+      abstractValidationmessage: ComponentClass<AbstractLabelTextProps, Theme>,
     ) => Component<AbstractLabelTextProps, Theme>),
   ): this;
   register(
     component: ThemableComponents.ValidationMessage,
     theme: ((
-      abstractValidationmessage: Component<
+      abstractValidationmessage: ComponentClass<
         AbstractValidationMessageProps,
         Theme
       >,
@@ -66,49 +72,49 @@ export interface BaseThemeRegister<Theme> {
   register(
     component: ThemableComponents.PrimaryButton,
     theme: ((
-      abstractValidationmessage: Component<ButtonProps, Theme>,
+      abstractValidationmessage: ComponentClass<ButtonProps, Theme>,
     ) => Component<ButtonProps, Theme>),
   ): this;
   register(
     component: ThemableComponents.SecondaryButton,
     theme: ((
-      abstractValidationmessage: Component<ButtonProps, Theme>,
+      abstractValidationmessage: ComponentClass<ButtonProps, Theme>,
     ) => Component<ButtonProps, Theme>),
   ): this;
   register(
     component: ThemableComponents.SuccessButton,
     theme: ((
-      abstractValidationmessage: Component<ButtonProps, Theme>,
+      abstractValidationmessage: ComponentClass<ButtonProps, Theme>,
     ) => Component<ButtonProps, Theme>),
   ): this;
   register(
     component: ThemableComponents.InfoButton,
     theme: ((
-      abstractValidationmessage: Component<ButtonProps, Theme>,
+      abstractValidationmessage: ComponentClass<ButtonProps, Theme>,
     ) => Component<ButtonProps, Theme>),
   ): this;
   register(
     component: ThemableComponents.WarningButton,
     theme: ((
-      abstractValidationmessage: Component<ButtonProps, Theme>,
+      abstractValidationmessage: ComponentClass<ButtonProps, Theme>,
     ) => Component<ButtonProps, Theme>),
   ): this;
   register(
     component: ThemableComponents.DangerButton,
     theme: ((
-      abstractValidationmessage: Component<ButtonProps, Theme>,
+      abstractValidationmessage: ComponentClass<ButtonProps, Theme>,
     ) => Component<ButtonProps, Theme>),
   ): this;
   register(
     component: ThemableComponents.LinkButton,
     theme: ((
-      abstractValidationmessage: Component<ButtonProps, Theme>,
+      abstractValidationmessage: ComponentClass<ButtonProps, Theme>,
     ) => Component<ButtonProps, Theme>),
   ): this;
   register(
     component: ThemableComponents.InlineLinkButton,
     theme: ((
-      abstractValidationmessage: Component<ButtonProps, Theme>,
+      abstractValidationmessage: ComponentClass<ButtonProps, Theme>,
     ) => Component<ButtonProps, Theme>),
   ): this;
 }
@@ -117,53 +123,53 @@ export interface AbstractComponentRegister {
   registerAbstractComponent(
     component: ThemableComponents.Button,
     implementation: Component<AbstractButtonProps, any>,
-  ): Component<AbstractButtonProps, any>;
+  ): StatelessComponent<AbstractButtonProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.FormGroup,
     implementation: Component<AbstractFormGroupProps, any>,
-  ): Component<AbstractFormGroupProps, any>;
+  ): StatelessComponent<AbstractFormGroupProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.InputBox,
     implementation: Component<AbstractInputBoxProps, any>,
-  ): Component<AbstractInputBoxProps, any>;
+  ): StatelessComponent<AbstractInputBoxProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.LabelText,
     implementation: Component<AbstractLabelTextProps, any>,
-  ): Component<AbstractLabelTextProps, any>;
+  ): StatelessComponent<AbstractLabelTextProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.ValidationMessage,
     implementation: Component<AbstractValidationMessageProps, any>,
-  ): Component<AbstractValidationMessageProps, any>;
+  ): StatelessComponent<AbstractValidationMessageProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.PrimaryButton,
     implementation: Component<ButtonProps, any>,
-  ): Component<ButtonProps, any>;
+  ): StatelessComponent<ButtonProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.SecondaryButton,
     implementation: Component<ButtonProps, any>,
-  ): Component<ButtonProps, any>;
+  ): StatelessComponent<ButtonProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.SuccessButton,
     implementation: Component<ButtonProps, any>,
-  ): Component<ButtonProps, any>;
+  ): StatelessComponent<ButtonProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.InfoButton,
     implementation: Component<ButtonProps, any>,
-  ): Component<ButtonProps, any>;
+  ): StatelessComponent<ButtonProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.WarningButton,
     implementation: Component<ButtonProps, any>,
-  ): Component<ButtonProps, any>;
+  ): StatelessComponent<ButtonProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.DangerButton,
     implementation: Component<ButtonProps, any>,
-  ): Component<ButtonProps, any>;
+  ): StatelessComponent<ButtonProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.LinkButton,
     implementation: Component<ButtonProps, any>,
-  ): Component<ButtonProps, any>;
+  ): StatelessComponent<ButtonProps, any>;
   registerAbstractComponent(
     component: ThemableComponents.InlineLinkButton,
     implementation: Component<ButtonProps, any>,
-  ): Component<ButtonProps, any>;
+  ): StatelessComponent<ButtonProps, any>;
 }

@@ -6,6 +6,8 @@ import {
 import * as s from 'styled-components';
 import {
   Component,
+  ComponentClass,
+  StatelessComponent,
   ThemableComponents,
   AbstractComponentRegister,
   BaseThemeRegister,
@@ -92,12 +94,15 @@ export class ThemeRegister<Theme> implements IThemeRegister<Theme> {
   register<TProps>(
     component: ThemableComponents,
     theme: ((
-      AbstractComponent: Component<TProps, Theme>,
+      AbstractComponent: ComponentClass<TProps, Theme>,
     ) => Component<TProps, Theme>),
   ): this {
     const AbstractComponent = this._abstractComponents.get(component);
     if (AbstractComponent != null) {
-      this._registeredComponents.set(component, theme(AbstractComponent));
+      this._registeredComponents.set(
+        component,
+        theme(AbstractComponent as any),
+      );
     } else {
       this._componentThemes.set(component, theme);
     }
@@ -106,7 +111,7 @@ export class ThemeRegister<Theme> implements IThemeRegister<Theme> {
   registerAbstractComponent<TProps>(
     component: ThemableComponents,
     implementation: Component<TProps, Theme>,
-  ): Component<TProps, Theme> {
+  ): StatelessComponent<TProps, Theme> {
     this._abstractComponents.set(component, implementation);
     const theme = this._componentThemes.get(component);
     this._registeredComponents.set(

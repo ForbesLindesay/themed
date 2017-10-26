@@ -98,9 +98,11 @@ class AbstractInput extends React.Component<AbstractInputProps, State> {
   };
   _onFocus = () => {
     this.setState({focused: true});
+    this.props.onFocus && this.props.onFocus();
   };
   _onBlur = () => {
     this.setState({focused: false});
+    this.props.onBlur && this.props.onBlur();
   };
   render() {
     const render =
